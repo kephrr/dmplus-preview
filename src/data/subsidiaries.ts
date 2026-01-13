@@ -46,7 +46,7 @@ export const subsidiaries: Subsidiary[] = [
     theme: "theme-marketing",
     colorClass: "text-marketing",
     gradientClass: "from-marketing to-marketing-light",
-    slogan: "Créez l'impact, amplifiez votre voix"
+    slogan: "Rendre visible, crédible et mémorable."
   },
   {
     id: "investment",
@@ -65,7 +65,7 @@ export const subsidiaries: Subsidiary[] = [
     theme: "theme-investment",
     colorClass: "text-investment",
     gradientClass: "from-investment to-investment-light",
-    slogan: "Investir aujourd'hui, réussir demain"
+    slogan: "Investir avec stratégie, clarté et impact."
   },
   {
     id: "technologies",
@@ -84,7 +84,7 @@ export const subsidiaries: Subsidiary[] = [
     theme: "theme-tech",
     colorClass: "text-tech",
     gradientClass: "from-tech to-tech-light",
-    slogan: "Technologie au service de l'ambition"
+    slogan: "Digitaliser pour mieux performer."
   },
   {
     id: "academy",
@@ -103,13 +103,13 @@ export const subsidiaries: Subsidiary[] = [
     theme: "theme-academy",
     colorClass: "text-academy",
     gradientClass: "from-academy to-academy-light",
-    slogan: "Apprendre, évoluer, exceller"
+    slogan: "Former pour transformer durablement"
   },
   {
-    id: "hubs",
-    name: "DM+ Hubs",
-    shortName: "Hubs",
-    slug: "hubs",
+    id: "Services",
+    name: "DM+ Services",
+    shortName: "Services",
+    slug: "services",
     description: "Espaces d'innovation et d'incubation pour entrepreneurs visionnaires",
     longDescription: "DM+ Hubs crée des écosystèmes d'innovation où startups et entreprises établies collaborent. Nos espaces premium et notre accompagnement sur mesure catalysent la croissance et l'innovation.",
     services: [
@@ -122,7 +122,7 @@ export const subsidiaries: Subsidiary[] = [
     theme: "theme-hubs",
     colorClass: "text-hubs",
     gradientClass: "from-hubs to-hubs-light",
-    slogan: "L'innovation naît de la collaboration"
+    slogan: "Externaliser l’essentiel pour accélérer la croissance."
   },
   {
     id: "distribution",
@@ -141,7 +141,7 @@ export const subsidiaries: Subsidiary[] = [
     theme: "theme-distribution",
     colorClass: "text-distribution",
     gradientClass: "from-distribution to-distribution-light",
-    slogan: "Connecter, livrer, performer"
+    slogan: "Connecter les producteurs, fournisseurs et marchés."
   },
   {
     id: "analytics",
@@ -160,7 +160,7 @@ export const subsidiaries: Subsidiary[] = [
     theme: "theme-analytics",
     colorClass: "text-analytics",
     gradientClass: "from-analytics to-analytics-light",
-    slogan: "Les données éclairent les décisions"
+    slogan: "Décider mieux grâce à la donnée."
   },
   {
     id: "services",

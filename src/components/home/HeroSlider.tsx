@@ -23,8 +23,8 @@ const HeroSlider = () => {
     {
       id: "main",
       title: "DM+ Group",
-      subtitle: "L'Excellence Multi-Domaine",
-      description: "Un groupe innovant fédérant 8 entités spécialisées pour des solutions complètes et adaptées à la nouvelle ère.",
+      subtitle: "L'Excellence multisectorielle",
+      description: "Un groupe, une ambition, un écosystème structuré, pensé pour créer de la valeur durable, accompagner la croissance et bâtir des solutions utiles, ancrées et ambitieuses.",
       gradient: "from-primary to-primary-light",
       textColor: "text-white",
       bgImage: bgImage,
@@ -232,13 +232,6 @@ const HeroSlider = () => {
         transition={{ delay: 1.5 }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden lg:block"
       >
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-          className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-1"
-        >
-          <div className="w-1.5 h-3 rounded-full bg-white/60" />
-        </motion.div>
       </motion.div>
     </section>
   );
