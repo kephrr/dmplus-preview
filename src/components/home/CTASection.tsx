@@ -33,7 +33,7 @@ const CTASection = () => {
       <div className="absolute top-1/4 left-10 w-32 h-32 rounded-full bg-white/5 blur-2xl animate-float" />
       <div className="absolute bottom-1/4 right-10 w-48 h-48 rounded-full bg-white/5 blur-3xl animate-float animation-delay-400" />
 
-      <div className="container mx-auto px-4 lg:px-8 relative z-10">
+      <div className="container max-w-6xl lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <motion.div
@@ -63,22 +63,6 @@ const CTASection = () => {
                 </motion.li>
               ))}
             </ul>
-
-            <div className="flex flex-wrap gap-4">
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-white text-primary font-semibold hover:bg-white/90 transition-all duration-300 hover:scale-105 shadow-lg"
-              >
-                Contactez-nous
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <a
-                href="#filiales"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-white/10 text-white font-semibold hover:bg-white/20 backdrop-blur-sm transition-all duration-300 border border-white/20"
-              >
-                Explorer nos filiales
-              </a>
-            </div>
           </motion.div>
 
           {/* Stats Card */}
