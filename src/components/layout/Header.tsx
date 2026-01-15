@@ -27,9 +27,7 @@ const Header = () => {
   }, [location]);
 
   const navItems = [
-    { label: "Accueil", href: "/" },
-    { label: "Le Groupe", href: "/#groupe" },
-    { label: "Notre Approche", href: "/#approche" },
+    { label: "Accueil", href: "/#groupe" },
     { label: "Filiales", href: "/#filiales", hasDropdown: true },
     { label: "Contact", href: "/contact" },
   ];
@@ -87,28 +85,27 @@ const Header = () => {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 10 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 mt-2 w-80 bg-white rounded-2xl shadow-2xl border border-border overflow-hidden"
+                          className={`absolute top-full left-0 mt-2 w-80 ${isScrolled ? 'bg-white' : 'bg-white/5'} backdrop-blur-md 
+                          rounded-xl shadow-2xl overflow-hidden transition-all duration-200`}
                         >
-                          <div className="p-2">
+                          <div className="px-2 py-3">
                             {subsidiaries.map((sub) => {
                               const Icon = sub.icon;
                               return (
                                 <Link
                                   key={sub.id}
                                   to={`/filiale/${sub.slug}`}
-                                  className="flex items-center gap-3 p-3 rounded-xl hover:bg-muted transition-colors duration-200 group"
+                                  className={`flex items-center gap-3 p-1 rounded-xl 
+                                  hover:bg-white/5 transition-all duration-200 ${isScrolled ? 'text-black' : 'text-white'}`}
                                 >
-                                  <div className={cn(
-                                    "w-10 h-10 rounded-lg flex items-center justify-center bg-gradient-to-br",
-                                    sub.gradientClass
-                                  )}>
-                                    <Icon className="w-5 h-5 text-white" />
+                                  <div className="w-10 h-10 rounded-lg flex items-center justify-center">
+                                    <Icon className="w-5 h-5 8" />
                                   </div>
                                   <div>
-                                    <div className="font-medium text-foreground group-hover:text-primary transition-colors">
+                                    <div className="font-medium transition-colors">
                                       {sub.shortName}
                                     </div>
-                                    <div className="text-xs text-muted-foreground line-clamp-1">
+                                    <div className="text-xs line-clamp-1">
                                       {sub.services[0]}
                                     </div>
                                   </div>
