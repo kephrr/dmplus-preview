@@ -9,6 +9,7 @@ import {
   ArrowUpRight
 } from "lucide-react";
 import { subsidiaries } from "@/data/subsidiaries";
+import logo from "@/assets/LOGOTYPE DM+ Group WHITE-21.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -21,12 +22,9 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl bg-white text-primary flex items-center justify-center font-montserrat font-bold text-xl">
-                DM+
-              </div>
-              <span className="font-montserrat font-bold text-xl text-white">
-                Group
-              </span>
+               <a href="/">
+                    <img src={logo} alt="DM+ Group" className="h-10 w-auto" />
+                </a>
             </div>
             <p className="text-white/70 leading-relaxed">
               L'Excellence Multi-Domaine. Un groupe innovant fédérant 8 entités 

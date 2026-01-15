@@ -161,25 +161,6 @@ export const subsidiaries: Subsidiary[] = [
     colorClass: "text-analytics",
     gradientClass: "from-analytics to-analytics-light",
     slogan: "Décider mieux grâce à la donnée."
-  },
-  {
-    id: "services",
-    name: "DM+ Services",
-    shortName: "Services",
-    slug: "services",
-    description: "Conseil opérationnel et services managériaux de haute qualité",
-    longDescription: "DM+ Services accompagne les organisations dans l'optimisation de leurs opérations. Notre approche consulting allie expertise sectorielle et méthodologies éprouvées.",
-    services: [
-      "Consulting opérationnel",
-      "Externalisation de processus",
-      "Services managériaux"
-    ],
-    icon: Briefcase,
-    bgImage: bgImage,
-    theme: "theme-services",
-    colorClass: "text-services",
-    gradientClass: "from-services to-services-light",
-    slogan: "L'excellence opérationnelle, notre signature"
   }
 ];
 

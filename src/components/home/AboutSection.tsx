@@ -45,12 +45,12 @@ const AboutSection = () => {
 
   return (
     <section id="groupe" className="py-24 lg:py-32 min-h-[1000px] bg-background relative overflow-hidden" ref={ref}>
-      {/* Blur light effects */}
+      {/* Blur light effects */} 
       <div className="inset-0 -z-10">
         <div className="absolute top-1/4 left-1/2 w-[600px] h-[600px] rounded-full bg-sky-600/20 blur-[100px]" />
         <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-red-600/20 blur-[100px]" />
       </div>
-      <div className="container mx-auto px-4 lg:px-8 z-10 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <div className="container max-w-6xl px-4 lg:px-0 z-10 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -61,10 +61,10 @@ const AboutSection = () => {
           <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
             Notre ADN
           </span>
-          <h2 className="font-montserrat font-bold text-4xl md:text-5xl text-foreground mb-6">
+          <h2 className="font-montserrat font-bold text-2xl md:text-4xl text-foreground mb-6">
             Un écosystème unique au service de votre réussite
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-md text-foreground leading-relaxed">
             DM+ Group est un groupe multisectoriel dédié à la transformation économique 
             et sociale par l'innovation, la finance et la technologie.
           </p>
@@ -87,7 +87,7 @@ const AboutSection = () => {
                 style={{
                   backgroundImage: `url(${vrHeadset})`,
                   backgroundSize: "cover",
-                  backgroundPosition: "left",
+                  backgroundPosition: "top",
                 }}
               >
                 <div className="absolute inset-0 bg-black/20 transition-opacity duration-500 group-hover:opacity-0" />
