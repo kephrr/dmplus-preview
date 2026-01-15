@@ -10,7 +10,6 @@ const Index = () => {
     <Layout>
       <HeroSlider />
       <AboutSection />
-      <ApproachSection />
       <SubsidiariesSection />
       <CTASection />
     </Layout>

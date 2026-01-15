@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Search, Lightbulb, Cog, Rocket, BarChart3 } from "lucide-react";
+import WritingText from "../ui/WritingText";
 
 const steps = [
   {
@@ -40,7 +41,8 @@ const ApproachSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="approche" className="py-24 lg:py-32 bg-muted/30" ref={ref}>
+    <section id="approche" className="py-24 lg:py-32 bg-muted/30" ref={ref}
+    style={{ backgroundImage: "url('/approach-bg.jpg')" }}>
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header */}
         <motion.div
