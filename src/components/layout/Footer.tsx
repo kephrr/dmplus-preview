@@ -15,12 +15,12 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-secondary text-secondary-foreground">
+    <footer className="bg-zinc-900">
       {/* Main Footer */}
       <div className="container mx-auto px-4 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Column */}
-          <div className="space-y-6">
+          <div className="space-y-6 text-sm">
             <div className="flex items-center gap-3">
                <a href="/">
                     <img src={logo} alt="DM+ Group" className="h-10 w-auto" />
@@ -50,36 +50,16 @@ const Footer = () => {
           {/* Nos Filiales */}
           <div>
             <h4 className="font-montserrat font-semibold text-white text-lg mb-6">
-              Nos Filiales
+              Nos Entités
             </h4>
-            <ul className="space-y-3">
-              {subsidiaries.slice(0, 4).map((sub) => (
+            <ul className="space-y-3 text-sm">
+              {subsidiaries.map((sub) => (
                 <li key={sub.id}>
                   <Link
                     to={`/filiale/${sub.slug}`}
                     className="text-white/70 hover:text-white transition-colors duration-300 flex items-center gap-2 group"
                   >
-                    {sub.shortName}
-                    <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* More Subsidiaries */}
-          <div>
-            <h4 className="font-montserrat font-semibold text-white text-lg mb-6">
-              &nbsp;
-            </h4>
-            <ul className="space-y-3">
-              {subsidiaries.slice(4).map((sub) => (
-                <li key={sub.id}>
-                  <Link
-                    to={`/filiale/${sub.slug}`}
-                    className="text-white/70 hover:text-white transition-colors duration-300 flex items-center gap-2 group"
-                  >
-                    {sub.shortName}
+                    {sub.name}
                     <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </Link>
                 </li>
@@ -92,7 +72,7 @@ const Footer = () => {
             <h4 className="font-montserrat font-semibold text-white text-lg mb-6">
               Contact
             </h4>
-            <ul className="space-y-4">
+            <ul className="space-y-4 text-sm">
               <li>
                 <a
                   href="mailto:contact@dmplus-group.com"

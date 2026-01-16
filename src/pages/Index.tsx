@@ -4,6 +4,7 @@ import AboutSection from "@/components/home/AboutSection";
 import ApproachSection from "@/components/home/ApproachSection";
 import SubsidiariesSection from "@/components/home/SubsidiariesSection";
 import CTASection from "@/components/home/CTASection";
+import ProcessSection from "@/components/home/ProcessusSteps";
 
 const Index = () => {
   return (
@@ -11,6 +12,7 @@ const Index = () => {
       <HeroSlider />
       <AboutSection />
       <SubsidiariesSection />
+      {/*<ProcessSection/>*/}
       <CTASection />
     </Layout>
   );

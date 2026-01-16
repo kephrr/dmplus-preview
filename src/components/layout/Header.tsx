@@ -28,7 +28,7 @@ const Header = () => {
 
   const navItems = [
     { label: "Accueil", href: "/#groupe" },
-    { label: "Filiales", href: "/#filiales", hasDropdown: true },
+    { label: "Nos entités", href: "/#entites", hasDropdown: true },
     { label: "Contact", href: "/contact" },
   ];
 
