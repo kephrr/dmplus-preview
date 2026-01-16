@@ -1,10 +1,13 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Truck, Zap } from "lucide-react";
 import { subsidiaries } from "@/data/subsidiaries";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 import bgImage from "@/assets/dmplus-tech.webp";
+import LogoDM from "@/assets/head dmplus.png";
+import {orbitingEntities} from "@/data/animation";
+import { SolarSystem } from "./solar-system-anim";
 
 const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -105,90 +108,103 @@ const HeroSlider = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -30 }}
             transition={{ duration: 0.6 }}
-            className=" md:px-12 max-w-4xl"
+            className="flex md:px-12 w-full"
           >
-            <motion.span
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2 }}
-              className="inline-block px-4 py-2 rounded-full bg-white/10
-               backdrop-blur-sm text-white/90 text-xs font-medium mb-4"
-            >
-              {currentSlide === 0 ? "Bienvenue chez" : "Découvrez"}
-            </motion.span>
+            <div className="flex-1">     
+              <motion.span
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2 }}
+                className="inline-block px-4 py-2 rounded-full bg-white/10
+                backdrop-blur-sm text-white/90 text-xs font-medium mb-4"
+              >
+                {currentSlide === 0 ? "Bienvenue chez" : "Découvrez"}
+              </motion.span>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className={cn(
-                "font-montserrat font-bold text-2xl md:text-4xl lg:text-5xl mb-6",
-                slides[currentSlide].textColor
-              )}
-            >
-              {slides[currentSlide].title}
-            </motion.h1>
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                className={cn(
+                  "font-montserrat font-bold text-2xl md:text-4xl lg:text-5xl mb-6",
+                  slides[currentSlide].textColor
+                )}
+              >
+                {slides[currentSlide].title}
+              </motion.h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className={cn(
-                "font-montserrat font-semibold text-2xl md:text-3xl mb-4",
-                slides[currentSlide].textColor,
-                "opacity-90"
-              )}
-            >
-              {slides[currentSlide].subtitle}
-            </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className={cn(
+                  "font-montserrat font-semibold text-2xl md:text-3xl mb-4",
+                  slides[currentSlide].textColor,
+                  "opacity-90"
+                )}
+              >
+                {slides[currentSlide].subtitle}
+              </motion.p>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-              className={cn(
-                "text-lg md:text-md max-w-2xl mb-8",
-                slides[currentSlide].textColor,
-                "opacity-80"
-              )}
-            >
-              {slides[currentSlide].description}
-            </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 }}
+                className={cn(
+                  "text-lg md:text-md max-w-2xl mb-8",
+                  slides[currentSlide].textColor,
+                  "opacity-80"
+                )}
+              >
+                {slides[currentSlide].description}
+              </motion.p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-              className="flex flex-wrap gap-4"
-            >
-              {slides[currentSlide].link ? (
-                <Link
-                  to={slides[currentSlide].link}
-                  className="px-4 py-2 text-sm rounded-3xl border-white border
-                  text-white font-semibold bg-white/10 backdrop-blur-md
-                  hover:bg-white/20 transition-all duration-300"
-                >
-                  En savoir plus
-                </Link>
-              ) : (
-                <>
-                  <a
-                    href="#filiales"
-                    className="px-8 py-4 rounded-xl bg-white text-primary font-semibold hover:bg-white/90 transition-all duration-300 hover:scale-105 shadow-lg"
-                  >
-                    Découvrir nos filiales
-                  </a>
-                  <a
-                    href="#groupe"
-                    className="px-8 py-4 rounded-xl bg-white/10 text-white font-semibold hover:bg-white/20 backdrop-blur-sm transition-all duration-300 border border-white/20"
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
+                className="flex flex-wrap gap-4"
+              >
+                {slides[currentSlide].link ? (
+                  <Link
+                    to={slides[currentSlide].link}
+                    className="px-4 py-2 text-sm rounded-3xl border-white border
+                    text-white font-semibold bg-white/10 backdrop-blur-md
+                    hover:bg-white/20 transition-all duration-300"
                   >
                     En savoir plus
-                  </a>
-                </>
-              )}
-            </motion.div>
+                  </Link>
+                ) : (
+                  <>
+                    <a
+                      href="#filiales"
+                      className="px-8 py-4 rounded-xl bg-white text-primary font-semibold hover:bg-white/90 transition-all duration-300 hover:scale-105 shadow-lg"
+                    >
+                      Découvrir nos filiales
+                    </a>
+                    <a
+                      href="#groupe"
+                      className="px-8 py-4 rounded-xl bg-white/10 text-white font-semibold hover:bg-white/20 backdrop-blur-sm transition-all duration-300 border border-white/20"
+                    >
+                      En savoir plus
+                    </a>
+                  </>
+                )}
+              </motion.div>
+            </div>
+            
           </motion.div>
         </AnimatePresence>
+        <div className="">
+              <div className="bg-transparent flex items-center justify-center">
+                <SolarSystem
+                  centerIcon={<img src={LogoDM} alt="Logo" />}
+                  centerSize={80}
+                  entities={orbitingEntities}
+                  className="w-[150px] h-[150px]"
+                />
+              </div>
+        </div>
       </div>
 
       {/* Navigation Arrows */}
