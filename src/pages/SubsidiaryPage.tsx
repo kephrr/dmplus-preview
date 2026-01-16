@@ -5,6 +5,8 @@ import { ArrowLeft, ArrowRight, Play, Users, Award, Briefcase } from "lucide-rea
 import Layout from "@/components/layout/Layout";
 import { getSubsidiaryBySlug, subsidiaries } from "@/data/subsidiaries";
 import { cn } from "@/lib/utils";
+import InvestmentPage from "@/components/InvestmentPage";
+import DistributionPage from "@/components/DistributionPage";
 
 const SubsidiaryPage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -21,6 +23,26 @@ const SubsidiaryPage = () => {
             </Link>
           </div>
         </div>
+      </Layout>
+    );
+  }
+
+  if (slug === 'investment') {
+    return (
+      <Layout>
+        <InvestmentPage subsidiary={subsidiary} />
+      </Layout>
+    );
+  }
+
+  if (subsidiary.id === 'distribution') {
+    return (
+      <Layout>
+        <DistributionPage 
+          gradientClass={subsidiary.gradientClass}
+          colorClass={subsidiary.colorClass}
+          subsidiary={subsidiary} // Ajout de la prop subsidiary
+        />
       </Layout>
     );
   }
