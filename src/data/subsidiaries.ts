@@ -11,22 +11,7 @@ import {
 
 import bgImage from "@/assets/dmplus-tech.webp";
 import ImgCom from "@/assets/dmplus-com.png";
-
-export interface Subsidiary {
-  id: string;
-  name: string;
-  shortName: string;
-  slug: string;
-  description: string;
-  longDescription: string;
-  services: string[];
-  icon: typeof Megaphone;
-  bgImage?: string;
-  theme: string;
-  colorClass: string;
-  gradientClass: string;
-  slogan: string;
-}
+import { Subsidiary } from "@/types/subsidiaries";
 
 export const subsidiaries: Subsidiary[] = [
   {

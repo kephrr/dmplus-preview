@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 import { subsidiaries } from "@/data/subsidiaries";
 import { cn } from "@/lib/utils";
 import profileIcon from "@/assets/person-icon.png"
-import background from "@/assets/trust-in-government.webp"
+import background from "@/assets/afrique-carte.jpg"
 
 const SubsidiariesSection = () => {
   const ref = useRef(null);
