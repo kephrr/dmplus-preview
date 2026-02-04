@@ -8,6 +8,9 @@ import ProcessSection from "@/components/home/ProcessusSteps";
 import CarouselDomain from "@/components/home/CarouselDomain";
 import { subsidiaries } from "@/data/subsidiaries";
 import { SubsidiaySlide } from "@/types/subsidiaries";
+import HeroSection from "@/components/home/HeroSection";
+import KeyFigures from "@/components/home/NosChiffresCles";
+import StrategySection from "@/components/home/NosPilliersStratégiques";
 
 export const subsidiarySlides: SubsidiaySlide[] = [
   {
@@ -122,9 +125,11 @@ export const subsidiarySlides: SubsidiaySlide[] = [
 const Index = () => {
   return (
     <Layout>
-      <HeroSlider />
+      <HeroSection />
       <AboutSection />
       <CarouselDomain data={subsidiarySlides}/>
+      <KeyFigures />
+      <StrategySection />
       {/*<ProcessSection/> <CarouselDomain/>*/}
       <CTASection />
     </Layout>

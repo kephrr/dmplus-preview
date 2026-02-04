@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Target, Lightbulb, Users, TrendingUp, Shield, Globe } from "lucide-react";
 import vrHeadset from "@/assets/vr-headset.webp";
 
@@ -39,16 +39,45 @@ const stats = [
   { value: "1000+", label: "Projets réalisés" },
 ];
 
+const colors = [
+  "bg-rose-600",
+  "bg-yellow-600", 
+  "bg-blue-600",
+  "bg-rose-600",
+  "bg-sky-600",
+  "bg-green-600",
+  "bg-indigo-600"
+];
+
+const blurColors = [
+  "bg-rose-600/20",
+  "bg-yellow-600/20", 
+  "bg-blue-600/20",
+  "bg-rose-600/20",
+  "bg-sky-600/20",
+  "bg-green-600/20",
+  "bg-indigo-600/20"
+];
+
 const AboutSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [currentColorIndex, setCurrentColorIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentColorIndex((prev) => (prev + 1) % colors.length);
+    }, 5000); // Même rythme que le HeroSlider
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <section id="groupe" className="py-24 lg:py-32 min-h-[1000px] bg-background relative overflow-hidden" ref={ref}>
+    <section id="groupe" className="py-24 lg:py-32 min-h-[1200px] bg-background relative overflow-hidden" ref={ref}>
       {/* Blur light effects */} 
       <div className="inset-0 -z-10">
-        <div className="absolute top-1/4 left-1/2 w-[600px] h-[600px] rounded-full bg-sky-600/20 blur-[100px]" />
-        <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-red-600/20 blur-[100px]" />
+        <div className={`absolute top-1/4 left-1/2 w-[600px] h-[600px] rounded-full ${blurColors[currentColorIndex]} blur-[100px]`} />
+        <div className={`absolute bottom-1/4 left-1/4 w-[500px] h-[500px] rounded-full ${blurColors[currentColorIndex]} blur-[100px]`} />
       </div>
       <div className="container max-w-6xl px-4 lg:px-0 z-10 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         {/* Header */}
@@ -62,7 +91,8 @@ const AboutSection = () => {
             Notre ADN
           </span>
           <h2 className="font-montserrat font-bold text-2xl md:text-4xl text-foreground mb-6">
-            Un écosystème unique au service de votre réussite
+            Un écosystème <div className={`${colors[currentColorIndex]} p-1.5 text-white rotate-6 max-w-fit mx-auto`}>unique</div>
+              au service de votre réussite
           </h2>
           <p className="text-md text-foreground leading-relaxed">
             DM+ Group est un groupe multisectoriel dédié à la transformation économique 
@@ -71,7 +101,7 @@ const AboutSection = () => {
         </motion.div>
 
         {/* Values Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 px-10">
+        <div className="grid md:grid-cols-2 gap-6 px-10">
           {values.map((value, index) => {
             const Icon = value.icon;
             const isLargeItem = index === 2; // Third item will be larger
@@ -82,8 +112,9 @@ const AboutSection = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
-                className={`group p-4 rounded-2xl backdrop-blur-sm border border-border 
-                transition-all duration-500 row-span-2 overflow-hidden`}
+                className={`group p-4 rounded-2xl backdrop-blur-sm border
+                border-border min-h-[300px]
+                transition-all duration-500 col-span-2 overflow-hidden`}
                 style={{
                   backgroundImage: `url(${vrHeadset})`,
                   backgroundSize: "cover",
@@ -119,14 +150,18 @@ const AboutSection = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
-                className={`group p-4 rounded-2xl bg-white/70 hover:bg-white backdrop-blur-sm border border-border 
+                className={`group p-4 bg-white
+  border border-neutral-200
+  rounded-2xl
+  shadow-sm
+  shadow-neutral-900/10
                 transition-all duration-500`}
               >
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center 
+                <div className="w-14 h-14 bg-white border border-neutral-200 rounded-2xl flex items-center 
                 justify-center mb-6 transition-all duration-300">
                   <Icon className="w-7 h-7 text-primary transition-colors" />
                 </div>
-                <h3 className="font-montserrat font-bold text-md text-foreground mb-3">
+                <h3 className="font-montserrat font-bold text-xl text-foreground mb-3">
                   {value.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
