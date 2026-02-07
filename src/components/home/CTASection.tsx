@@ -34,7 +34,7 @@ const CTASection = () => {
       <div className="absolute bottom-1/4 right-10 w-48 h-48 rounded-full bg-white/5 blur-3xl animate-float animation-delay-400" />
 
       <div className="container max-w-6xl lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="items-center">
           {/* Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -63,42 +63,6 @@ const CTASection = () => {
                 </motion.li>
               ))}
             </ul>
-          </motion.div>
-
-          {/* Stats Card */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 lg:p-10 border border-white/20"
-          >
-            <h3 className="font-montserrat font-bold text-2xl text-white mb-8">
-              Nos résultats parlent d'eux-mêmes
-            </h3>
-
-            <div className="space-y-6">
-              {[
-                { label: "Satisfaction client", value: "98%", bar: 98 },
-                { label: "Projets livrés à temps", value: "95%", bar: 95 },
-                { label: "Croissance des clients", value: "+45%", bar: 45 },
-                { label: "Taux de rétention", value: "92%", bar: 92 },
-              ].map((stat, index) => (
-                <div key={index}>
-                  <div className="flex justify-between text-white mb-2">
-                    <span className="text-white/80">{stat.label}</span>
-                    <span className="font-bold">{stat.value}</span>
-                  </div>
-                  <div className="h-2 bg-white/20 rounded-full overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      animate={isInView ? { width: `${stat.bar}%` } : {}}
-                      transition={{ duration: 1, delay: 0.5 + 0.1 * index }}
-                      className="h-full bg-white rounded-full"
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
           </motion.div>
         </div>
       </div>

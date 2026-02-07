@@ -113,14 +113,14 @@ export default function CarouselDomain({
       {/* NAVIGATION */}
       <button
         onClick={prev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 backdrop-blur hover:bg-white/20 transition"
+        className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-blue-800/80 p-3 backdrop-blur hover:bg-blue-800  transition-colors duration-200 shadow-lg"
       >
         <ChevronLeft className="h-5 w-5 text-white" />
       </button>
 
       <button
         onClick={next}
-        className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 backdrop-blur hover:bg-white/20 transition"
+        className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-blue-800/80 p-3 backdrop-blur hover:bg-blue-800  transition-colors duration-200 shadow-lg"
       >
         <ChevronRight className="h-5 w-5 text-white" />
       </button>

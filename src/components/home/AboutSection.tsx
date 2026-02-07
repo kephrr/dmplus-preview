@@ -79,7 +79,7 @@ const AboutSection = () => {
         <div className={`absolute top-1/4 left-1/2 w-[600px] h-[600px] rounded-full ${blurColors[currentColorIndex]} blur-[100px]`} />
         <div className={`absolute bottom-1/4 left-1/4 w-[500px] h-[500px] rounded-full ${blurColors[currentColorIndex]} blur-[100px]`} />
       </div>
-      <div className="container max-w-6xl px-4 lg:px-0 z-10 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <div className="container max-w-5xl px-4 lg:px-0 z-10 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -91,7 +91,7 @@ const AboutSection = () => {
             Notre ADN
           </span>
           <h2 className="font-montserrat font-bold text-2xl md:text-4xl text-foreground mb-6">
-            Un écosystème <div className={`${colors[currentColorIndex]} p-1.5 text-white rotate-6 max-w-fit mx-auto`}>unique</div>
+            Un écosystème <div className={`${colors[currentColorIndex]} transition-colors duration-500 p-1.5 text-white rotate-6 max-w-fit mx-auto`}>unique</div>
               au service de votre réussite
           </h2>
           <p className="text-md text-foreground leading-relaxed">
