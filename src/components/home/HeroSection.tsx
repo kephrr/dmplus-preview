@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowUpRight, Map, Sun, Wind, Thermometer, MessageSquareCode } from 'lucide-react';
 import bg from '@/assets/new-york-city.jpg';
+import { TypingText } from '../ui/typing-text';
 
 const HeroSection = () => {
   return (
@@ -14,7 +15,7 @@ const HeroSection = () => {
         }}
       >
         {/* Overlay to match the blue tint if needed */}
-        <div className="absolute inset-0 bg-blue-500/10"></div>
+        <div className="absolute inset-0 bg-blue-500/40"></div>
       </div>
 
       {/* Main Content Container */}
@@ -23,9 +24,21 @@ const HeroSection = () => {
         {/* Left Side: Text Content */}
         <div className="flex flex-col justify-center space-y-8 max-w-xl">
           <div className="space-y-4">
-            <h1 className="text-7xl md:text-8xl font-medium leading-[1.1] tracking-tight">
-              Un groupe <br /> Une équipe.
-              <br /> Un but.
+            <h1 className="text-7xl md:text-8xl font-medium leading-[1.1] tracking-tight ">
+              Un groupe, <br /> Une équipe,
+              <br /> 
+              <TypingText
+                        words={[
+                            "Une vision.", "Un projet.","Un pari."
+                        ]}
+                        typingSpeed={70}       // vitesse de frappe
+                        deletingSpeed={40}     // vitesse d'effacement
+                        pauseBeforeDelete={3000}       // ⏱️ pause de 3 secondes avant effacement
+                        pauseBeforeType={30}  // temps après effacement avant le mot suivant
+                                 // (si tu veux que ça s'arrête après le mot)
+                        cursor
+                        className="text-7xl md:text-8xl leading-[1.1] tracking-tight ugaz-one-regular"
+                        />
             </h1>
             <p className="text-sm md:text-base text-white/80 max-w-md leading-relaxed">
               02. Journey where the crisp mountain air meets the thrill of the descent. 

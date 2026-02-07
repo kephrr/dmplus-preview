@@ -6,9 +6,9 @@ const stats = [
   {
     icon: <Coins className="w-10 h-10" />,
     value: "8.4",
-    suffix: "Mrds",
-    prefix: "€",
-    label: "milliards de chiffre d'affaires",
+    suffix: "",
+    prefix: "FCFA",
+    label: "millions de chiffre d'affaires",
   },
   {
     icon: <MapPin className="w-10 h-10" />,
@@ -39,7 +39,7 @@ const KeyFigures = () => {
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center text-4xl md:text-5xl font-bold mb-20 tracking-tight"
         >
-          Nos chiffres clés <span className="text-blue-400">2024</span>
+          Nos chiffres clés <span className="text-blue-400 font-medium ugaz-one-regular">2024</span>
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
