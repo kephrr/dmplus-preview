@@ -5,6 +5,7 @@ export const orbitingEntities = [
     {
       id: "code",
       icon: <Code className="h-5 w-5 text-sky-500" />,
+      name: "Technologies",
       orbitRadius: 100,
       duration: 8,
       size: 45,

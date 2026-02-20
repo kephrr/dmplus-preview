@@ -1,16 +1,20 @@
 import Layout from "@/components/layout/Layout";
-import HeroSlider from "@/components/home/HeroSlider";
-import AboutSection from "@/components/home/AboutSection";
-import ApproachSection from "@/components/home/ApproachSection";
-import SubsidiariesSection from "@/components/home/SubsidiariesSection";
+import AboutUsSection from "@/components/home/AboutUsSection";
 import CTASection from "@/components/home/CTASection";
-import ProcessSection from "@/components/home/ProcessusSteps";
-import CarouselDomain from "@/components/home/CarouselDomain";
+import OurEntities from "@/components/home/OurEntities";
 import { subsidiaries } from "@/data/subsidiaries";
 import { SubsidiaySlide } from "@/types/subsidiaries";
 import HeroSection from "@/components/home/HeroSection";
 import KeyFigures from "@/components/home/NosChiffresCles";
-import StrategySection from "@/components/home/NosPilliersStratégiques";
+import OurValues from "@/components/home/NosValeurs";
+import TrustedBy from "@/components/home/TrustedBy";
+import marketing from "@/assets/LOGOTYPE [Récupéré]-06.png"
+import analytics from "@/assets/LOGOTYPE [Récupéré]-08.png"
+import investment from "@/assets/LOGOTYPE [Récupéré]-10.png"
+import technologies from "@/assets/LOGOTYPE [Récupéré]-12.png"
+import distribution from "@/assets/LOGOTYPE [Récupéré]-14.png"
+import academy from "@/assets/LOGOTYPE [Récupéré]-18.png"
+import services from "@/assets/LOGOTYPE [Récupéré]-20.png"
 
 export const subsidiarySlides: SubsidiaySlide[] = [
   {
@@ -26,7 +30,8 @@ export const subsidiarySlides: SubsidiaySlide[] = [
       "Stratégies digitales et ","créatives"," pour amplifier votre marque"
     ],
     colorClass: subsidiaries[0].colorClass,
-    bgClass: "bg-gradient-to-r from-red-400 to-red-600"
+    bgClass: "bg-gradient-to-r from-red-400 to-red-600",
+    logo: marketing
   },
   {
     id: subsidiaries[1].id,
@@ -41,7 +46,8 @@ export const subsidiarySlides: SubsidiaySlide[] = [
       "Solutions financières pour ", "maximiser"," vos rendements"
     ],
     colorClass: subsidiaries[1].colorClass,
-    bgClass: "bg-gradient-to-r from-yellow-400 to-yellow-600"
+    bgClass: "bg-gradient-to-r from-yellow-400 to-yellow-600",
+    logo: investment
   },
   {
     id: subsidiaries[2].id,
@@ -56,7 +62,8 @@ export const subsidiarySlides: SubsidiaySlide[] = [
       "","Innovation", "technologique et transformation digitale sur mesure"
     ],
     colorClass: subsidiaries[2].colorClass,
-    bgClass: "bg-gradient-to-r from-blue-400 to-blue-600"
+    bgClass: "bg-gradient-to-r from-blue-400 to-blue-600",
+    logo: technologies
   },
   {
     id: subsidiaries[3].id,
@@ -71,22 +78,8 @@ export const subsidiarySlides: SubsidiaySlide[] = [
       "Formation d'excellence pour développer les ", "talents"," de demain"
     ],
     colorClass: subsidiaries[3].colorClass,
-    bgClass: "bg-gradient-to-r from-rose-400 to-rose-600"
-  },
-  {
-    id: subsidiaries[4].id,
-    bigTitle: "Nos domaines d’expertise",
-    title: subsidiaries[4].name,
-    description: subsidiaries[4].description,
-    longDescription: subsidiaries[4].longDescription,
-    services: subsidiaries[4].services,
-    icon: subsidiaries[4].icon,
-    bgImage: subsidiaries[4].bgImage,
-    slogan: [
-      "Espaces  d'","innovation et d'incubation"," pour entrepreneurs visionnaires"
-    ],
-    colorClass: subsidiaries[4].colorClass,
-    bgClass: "bg-gradient-to-r from-sky-400 to-sky-600"
+    bgClass: "bg-gradient-to-r from-rose-400 to-rose-600",
+    logo: academy
   },
   {
     id: subsidiaries[5].id,
@@ -101,7 +94,8 @@ export const subsidiarySlides: SubsidiaySlide[] = [
       "Solutions logistiques"," optimisées ","pour une supply chain performante"
     ],
     colorClass: subsidiaries[5].colorClass,
-    bgClass: "bg-gradient-to-r from-green-400 to-green-600"
+    bgClass: "bg-gradient-to-r from-green-400 to-green-600",
+    logo: distribution
   },
   {
     id: subsidiaries[6].id,
@@ -116,7 +110,8 @@ export const subsidiarySlides: SubsidiaySlide[] = [
       "Intelligence "," décisionnelle"," et exploitation avancée des données"
     ],
     colorClass: subsidiaries[6].colorClass,
-    bgClass: "bg-gradient-to-r from-indigo-400 to-indigo-600"
+    bgClass: "bg-gradient-to-r from-indigo-400 to-indigo-600",
+    logo: analytics
   },
 ];
 
@@ -126,10 +121,12 @@ const Index = () => {
   return (
     <Layout>
       <HeroSection />
-      <AboutSection />
-      <CarouselDomain data={subsidiarySlides}/>
+      <AboutUsSection />
+      <OurValues />
       <KeyFigures />
-      <StrategySection />
+      <OurEntities data={subsidiarySlides}/>
+      <div className="bg-slate-500/50 h-[0.5px] w-[80%] mx-auto mt-24"></div>
+      <TrustedBy/>
       {/*<ProcessSection/> <CarouselDomain/>*/}
       <CTASection />
     </Layout>

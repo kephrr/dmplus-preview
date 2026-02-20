@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils"
 interface OrbitingEntity {
   id: string
   icon: React.ReactNode
+  name?: string
   orbitRadius: number
   duration: number
   delay?: number

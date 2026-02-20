@@ -41,7 +41,7 @@ const CTASection = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-montserrat font-bold text-4xl md:text-5xl text-white mb-6">
+            <h2 className="font-montserrat font-bold text-4xl text-white mb-6">
               Prêt à transformer votre vision en réalité ?
             </h2>
             <p className="text-xl text-white/80 mb-8 leading-relaxed">

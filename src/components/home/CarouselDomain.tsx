@@ -56,7 +56,7 @@ export default function CarouselDomain({
               
               {/* CONTENT */}
               <div className="max-w-6xl py-4 px-10 mx-auto">
-                <h1 className="text-5xl mb-10 max-auto font-bold text-center">
+                <h1 className="text-4xl mb-10 max-auto font-bold text-center">
                     {slide.slogan?.map((word, index) => (
                         index === 1 ? <span key={index} className={cn("p-2 fugaz-one-regular", slide.colorClass)}>{word}</span> : <span key={index}>{word}</span>
                     ))}

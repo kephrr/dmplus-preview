@@ -21,24 +21,34 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    setIsMobileMenuOpen(false);
-    setIsSubsidiariesOpen(false);
-  }, [location]);
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleNavClick = (href: string) => {
+    if (href.startsWith('/#')) {
+      const sectionId = href.substring(2); // Remove '/#'
+      scrollToSection(sectionId);
+    }
+  };
 
   const navItems = [
-    { label: "Accueil", href: "/#groupe" },
-    { label: "Nos entités", href: "/#entites", hasDropdown: true },
-    { label: "Contact", href: "/contact" },
+    { label: "Qui sommes-nous ?", href: "/#aboutus"},
+    { label: "Notre Expertise", href: "/#entites"},
+    { label: "Nos valeurs", href: "/#ourvalues"},
+    { label: "Nos entités", href: "/#entites", hasDropdown: true }
   ];
 
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-5",
         isScrolled
-          ? "bg-white/90 backdrop-blur-xl shadow-sm py-3"
-          : "bg-transparent py-12"
+          ? "bg-white/90 backdrop-blur-xl shadow-sm"
+          : "bg-transparent"
       )}
     >
       <div className="container mx-auto px-4 lg:px-8">
@@ -118,17 +128,17 @@ const Header = () => {
                     </AnimatePresence>
                   </div>
                 ) : (
-                  <Link
-                    to={item.href}
+                  <button
+                    onClick={() => handleNavClick(item.href)}
                     className={cn(
-                      "px-4 py-2 rounded-lg font-medium transition-all duration-300",
+                      "px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm",
                       isScrolled
                         ? "text-foreground hover:bg-muted"
                         : "text-white/90 hover:text-white hover:bg-white/10"
                     )}
                   >
                     {item.label}
-                  </Link>
+                  </button>
                 )}
               </div>
             ))}
@@ -218,12 +228,15 @@ const Header = () => {
                         </AnimatePresence>
                       </div>
                     ) : (
-                      <Link
-                        to={item.href}
-                        className="block px-4 py-3 rounded-xl text-foreground hover:bg-muted transition-colors"
+                      <button
+                        onClick={() => {
+                          handleNavClick(item.href);
+                          setIsMobileMenuOpen(false);
+                        }}
+                        className="block w-full px-4 py-3 rounded-xl text-foreground hover:bg-muted transition-colors text-left"
                       >
                         {item.label}
-                      </Link>
+                      </button>
                     )}
                   </div>
                 ))}

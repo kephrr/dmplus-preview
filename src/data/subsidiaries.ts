@@ -31,7 +31,7 @@ export const subsidiaries: Subsidiary[] = [
     theme: "theme-marketing",
     colorClass: "text-marketing",
     gradientClass: "from-marketing to-marketing-light",
-    slogan: "Rendre visible, crédible et mémorable."
+    slogan: "Rendre visible, crédible et mémorable.",
   },
   {
     id: "investment",
@@ -50,7 +50,7 @@ export const subsidiaries: Subsidiary[] = [
     theme: "theme-investment",
     colorClass: "text-investment",
     gradientClass: "from-investment to-investment-light",
-    slogan: "Investir avec stratégie, clarté et impact."
+    slogan: "Investir avec stratégie, clarté et impact.",
   },
   {
     id: "technologies",
@@ -69,7 +69,7 @@ export const subsidiaries: Subsidiary[] = [
     theme: "theme-tech",
     colorClass: "text-tech",
     gradientClass: "from-tech to-tech-light",
-    slogan: "Digitaliser pour mieux performer."
+    slogan: "Digitaliser pour mieux performer.",
   },
   {
     id: "academy",
@@ -107,7 +107,7 @@ export const subsidiaries: Subsidiary[] = [
     theme: "theme-hubs",
     colorClass: "text-hubs",
     gradientClass: "from-hubs to-hubs-light",
-    slogan: "Externaliser l’essentiel pour accélérer la croissance."
+    slogan: "Externaliser l’essentiel pour accélérer la croissance.",
   },
   {
     id: "distribution",

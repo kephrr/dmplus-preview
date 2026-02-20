@@ -91,12 +91,11 @@ const AboutSection = () => {
             Notre ADN
           </span>
           <h2 className="font-montserrat font-bold text-2xl md:text-4xl text-foreground mb-6">
-            Un écosystème <div className={`${colors[currentColorIndex]} transition-colors duration-500 p-1.5 text-white rotate-6 max-w-fit mx-auto`}>unique</div>
+            Plus qu'un groupe, un écosystème <div className={`${colors[currentColorIndex]} transition-colors duration-500 p-1.5 text-white rotate-6 max-w-fit mx-auto`}>unique</div>
               au service de votre réussite
           </h2>
           <p className="text-md text-foreground leading-relaxed">
-            DM+ Group est un groupe multisectoriel dédié à la transformation économique 
-            et sociale par l'innovation, la finance et la technologie.
+           DM+ GROUP, C’est un écosystème structuré, pensé pour créer de la valeur durable, accompagner la croissance et bâtir des solutions utiles, ancrées et ambitieuses.
           </p>
         </motion.div>
 

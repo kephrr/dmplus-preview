@@ -1,29 +1,30 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Globe2, Users2, MapPin, Coins } from 'lucide-react';
+import { Globe2, Users2, MapPin, Paperclip, Clock } from 'lucide-react';
 
 const stats = [
   {
-    icon: <Coins className="w-10 h-10" />,
-    value: "8.4",
+    icon: <Paperclip className="w-10 h-10" />,
+    value: "100",
     suffix: "",
-    prefix: "FCFA",
-    label: "millions de chiffre d'affaires",
+    prefix: "+de",
+    label: "Projets",
   },
   {
-    icon: <MapPin className="w-10 h-10" />,
-    value: "38",
-    label: "pays d'Afrique, 6 départements et collectivités d'Outre-Mer",
+    icon: <Clock className="w-10 h-10" />,
+    value: "10",
+    suffix: "ans",
+    label: "Experience",
   },
   {
     icon: <Globe2 className="w-10 h-10" />,
-    value: "45",
-    label: "marchés du continent",
+    value: "6",
+    label: "Bureaux en Afrique",
   },
   {
     icon: <Users2 className="w-10 h-10" />,
-    value: "22100",
-    label: "collaborateurs",
+    value: "40",
+    label: "Collaborateurs",
   },
 ];
 
@@ -39,7 +40,7 @@ const KeyFigures = () => {
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center text-4xl md:text-5xl font-bold mb-20 tracking-tight"
         >
-          Nos chiffres clés <span className="text-blue-400 font-medium ugaz-one-regular">2024</span>
+          Nos chiffres  <span className="text-blue-400 font-medium ugaz-one-regular">clés</span>
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
