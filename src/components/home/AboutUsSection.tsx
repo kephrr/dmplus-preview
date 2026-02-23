@@ -18,27 +18,55 @@ const AboutUsSection = () => {
         <div className={`absolute bottom-2/3 left-1/4 w-[300px] h-[300px] rounded-full bg-sky-600/10 blur-[100px]`} />
       </div>
       <div className="container max-w-5xl px-4 lg:px-0 z-10 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        {/* Header */}
+        {/* Titre */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="inline-block px-4 py-2 rounded-full bg-white text-primary text-sm font-semibold mb-4">
+          <motion.span 
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="inline-block px-4 py-2 rounded-full bg-white text-primary text-sm font-semibold mb-4"
+          >
             Notre ADN
-          </span>
-          <h2 className="font-montserrat font-bold text-2xl md:text-4xl text-foreground mb-6">
-            Plus qu'un groupe, un écosystème <div className={`bg-[#175e97] transition-colors duration-500 p-1.5 text-white rotate-6 max-w-fit mx-auto`}>unique</div>
+          </motion.span>
+          
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 1 }}
+            className="font-montserrat font-bold text-2xl md:text-4xl text-foreground mb-6"
+          >
+            Plus qu'un groupe, un écosystème 
+            <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0, rotate: 6 } : {}}
+            transition={{ duration: 0.6, delay: 1.2 }}
+            className={`bg-[#175e97] transition-colors duration-500 p-1.5
+             text-white rotate-6 max-w-fit mx-auto`}>unique</motion.div>
+
               au service de votre réussite
-          </h2>
-          <p className="text-md text-slate-600 leading-relaxed">
-           DM+ GROUP, C’est un écosystème structuré, pensé pour créer de la valeur durable, accompagner la croissance et bâtir des solutions utiles, ancrées et ambitieuses.
-          </p>
+          </motion.h2>
+          
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 1.5 }}
+            className="text-md text-slate-600 leading-relaxed"
+          >
+           DM+ GROUP, C'est un écosystème structuré, pensé pour créer de la valeur durable, accompagner la croissance et bâtir des solutions utiles, ancrées et ambitieuses.
+          </motion.p>
         </motion.div>
 
         {/* Values Grid */}
-        <div className="flex gap-0 px-10">
+        <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 1.5 }}
+            className="flex gap-0 px-10">
           <div className="w-[600px] min-h-[500px] bg-top bg-cover
           rounded-l-md"
           style={{ backgroundImage: `url(${bg})` }}>
@@ -68,7 +96,7 @@ const AboutUsSection = () => {
               <img src={fullLogoDM} alt="DM+ Group" className="w-24 h-auto mt-10" />
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

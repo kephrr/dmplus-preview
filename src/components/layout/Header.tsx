@@ -38,8 +38,9 @@ const Header = () => {
   const navItems = [
     { label: "Qui sommes-nous ?", href: "/#aboutus"},
     { label: "Nos Expertises", href: "/#expertises"},
-    { label: "Nos valeurs", href: "/#ourvalues"},
-    { label: "Nos entités", href: "/#entites", hasDropdown: true }
+    { label: "Nos Valeurs", href: "/#ourvalues"},
+    { label: "Nos Actus", href: "/#actualites"},
+    { label: "Nos Entités", href: "/#entites", hasDropdown: true }
   ];
 
   return (
