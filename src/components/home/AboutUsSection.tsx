@@ -69,13 +69,13 @@ const AboutUsSection = () => {
             transition={{ duration: 0.6, delay: 1.5 }}
             className="flex flex-col md:flex-row gap-0 md:px-10">
           <div className="md:w-[600px] min-h-[150px] bg-top bg-cover
-          md:rounded-l-md rounded-t-md "
+          md:rounded-l-md md:rounded-t-none rounded-t-md"
           style={{ backgroundImage: `url(${bg})` }}>
 
           </div>
           <div 
           className="p-2 md:p-6 border text-xs md:text-md text-foreground 
-          shadow-md md:rounded-r-md rounded-b-md bg-white">
+          shadow-md md:rounded-r-md rounded-b-md md:rounded-bl-none bg-white">
             <div className="hidden md:block opacity-20">
               <Quote width={42} height={42} />
             </div>
