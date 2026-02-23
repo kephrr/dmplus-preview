@@ -31,7 +31,7 @@ const stats = [
 
 const KeyFigures = () => {
   return (
-    <section className="relative py-20 px-6 text-white overflow-hidden">
+    <section className="relative py-12 md:py-20 px-6 text-white overflow-hidden">
       {/* Background image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -48,12 +48,14 @@ const KeyFigures = () => {
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-center text-4xl md:text-5xl font-bold mb-20 tracking-tight"
+          className="text-center text-2xl md:text-5xl font-bold 
+          mb-20 tracking-tight"
         >
           Nos chiffres  <span className="text-blue-400 font-medium ugaz-one-regular">clés</span>
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 
+        md:gap-12 gap-2">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
@@ -69,13 +71,13 @@ const KeyFigures = () => {
               
               <div className="flex items-baseline gap-1 mb-3">
                 {stat.prefix && <span className="text-2xl font-light">{stat.prefix}</span>}
-                <span className="text-5xl font-extrabold tracking-tighter">
+                <span className="text-3xl md:text-5xl font-extrabold tracking-tighter">
                   {stat.value}
                 </span>
                 {stat.suffix && <span className="text-xl font-medium ml-1 ">{stat.suffix}</span>}
               </div>
               
-              <p className="text-sm leading-relaxed text-blue-100/70 max-w-[200px] font-medium uppercase tracking-wider">
+              <p className="text-xs md:text-sm leading-relaxed text-blue-100/70 max-w-[200px] font-medium uppercase tracking-wider">
                 {stat.label}
               </p>
             </motion.div>

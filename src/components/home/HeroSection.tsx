@@ -10,7 +10,7 @@ import { SolarSystem } from './solar-system-anim';
 
 const HeroSection = () => {
   return (
-    <section id='groupe' className="relative w-full h-screen min-h-[600px] overflow-hidden bg-sky-400 text-white">
+    <section id='groupe' className="relative w-full md:h-screen h-[550px] md:min-h-[600px] overflow-hidden bg-sky-400 text-white">
       {/* Background Image Placeholder - Replace with actual URL */}
       <div 
         className="absolute inset-0 bg-cover bg-center z-0"
@@ -24,12 +24,13 @@ const HeroSection = () => {
       </div>
 
       {/* Main Content Container */}
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 h-full max-w-6xl mx-auto px-6 pt-10 pb-12">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 h-full 
+      max-w-6xl mx-auto px-6 md:pt-10 md:pb-12">
         
         {/* Left Side: Text Content */}
         <div className="flex flex-col justify-center space-y-8">
           <div className="space-y-4">
-            <h1 className="text-6xl font-medium leading-[1.1] tracking-tight ">
+            <h1 className="text-5xl md:text-6xl font-medium leading-[1.1] tracking-tight ">
               7 expertises,
               <br /> 
               <TypingText
@@ -44,7 +45,7 @@ const HeroSection = () => {
                         pauseBeforeType={30}  // temps après effacement avant le mot suivant
                                  // (si tu veux que ça s'arrête après le mot)
                         cursor
-                        className="text-5xl leading-[1.1] tracking-tight ugaz-one-regular"
+                        className="text-4xl md:text-5xl leading-[1.1] tracking-tight ugaz-one-regular"
                         />
             </h1>
             <p className="text-sm md:text-base text-white/80 max-w-md leading-relaxed">
@@ -61,7 +62,8 @@ const HeroSection = () => {
         </div>
 
         {/* Right Side: Glassmorphism Card */}
-        <div className="flex items-center justify-center lg:justify-end pb-20 lg:pb-0">
+        <div className="hidden md:flex items-center justify-center 
+        lg:justify-end pb-20 lg:pb-0">
           
           {/* Main Glass Card */}
             

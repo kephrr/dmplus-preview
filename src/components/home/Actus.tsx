@@ -10,9 +10,9 @@ const Actus = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             className="text-center mt-20">
-                <h2 className="text-3xl md:text-4xl font-bold relative inline-block font-montserrat text-foreground">
+                <h2 className="text-2xl md:text-4xl font-bold relative inline-block font-montserrat text-foreground">
                     Nos actualités
-                    <p className='text-xl font-normal py-2 max-w-2xl mx-auto'>
+                    <p className='text-sm md:text-xl font-normal py-2 max-w-2xl mx-auto'>
                     Des compétences complémentaires, structurées autour d’une même ambition : créer de la valeur durable.
                     </p>
                     <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-24 h-1 bg-slate-600 rounded-full" />
@@ -49,7 +49,8 @@ export function CardActus({ item }: CardActusProps) {
   return (
     <a
       href={item.href ?? "#"}
-      className="group block rounded-xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+      className="group block rounded-xl overflow-hidden bg-white shadow-md 
+      hover:shadow-xl transition-shadow duration-300 cursor-pointer"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{ textDecoration: "none" }}
@@ -158,7 +159,8 @@ export function ActusCarousel() {
           <button
             onClick={() => setPage((p) => Math.max(0, p - 1))}
             disabled={page === 0}
-            className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-red-700 hover:text-white hover:border-red-700 disabled:opacity-30 disabled:cursor-not-allowed transition-colors duration-200"
+            className="w-10 h-10 flex items-center justify-center 
+            rounded-full border border-gray-300 text-gray-700 hover:bg-red-700 hover:text-white hover:border-red-700 disabled:opacity-30 disabled:cursor-not-allowed transition-colors duration-200"
             aria-label="Page précédente"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

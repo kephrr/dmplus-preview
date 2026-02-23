@@ -48,21 +48,22 @@ export default function OurEntities({ data, interval = 10000 }: Props) {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             className="text-center my-20">
-            <h2 className="text-3xl md:text-4xl font-bold relative inline-block font-montserrat text-foreground">
+            <h2 className="text-2xl md:text-4xl font-bold relative inline-block font-montserrat text-foreground">
                 Nos expertises
-                <p className='text-xl font-normal py-2 max-w-2xl mx-auto'>
+                <p className='text-sm md:text-xl font-normal py-2 max-w-2xl mx-auto'>
                   Des compétences complémentaires, structurées autour d’une même ambition : créer de la valeur durable.
                 </p>
                 <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-24 h-1 bg-slate-600 rounded-full" />
             </h2>
         </motion.div>
-      <div className="max-w-6xl py-6 px-10 mx-auto flex items-center gap-10 min-h-[400px]">
+      <div className="max-w-6xl py-6 px-10 mx-auto flex md:flex-row flex-col-reverse
+      items-center gap-10 min-h-[400px]">
 
         {/* ── LEFT: slide content ─────────────────────────────────── */}
         <div className="flex-1 min-w-0">
           {/* Slogan */}
           {slide.slogan && (
-            <h1 className="text-3xl md:text-4xl mb-8 font-bold">
+            <h1 className="text-2xl md:text-4xl mb-8 font-bold">
               {slide.slogan.map((word, wi) =>
                 wi === 1 ? (
                   <span key={wi} className={cn("px-2 fugaz-one-regular", slide.colorClass)}>
@@ -111,9 +112,22 @@ export default function OurEntities({ data, interval = 10000 }: Props) {
         </div>
 
         {/* ── RIGHT: circular icon navigator ──────────────────────── */}
-        <div
+        <div className="md:block hidden">
+          <CircularSection size="380px" data={data} index={index} handleIconClick={handleIconClick} slide={slide} getPosition={getPosition}/>
+        </div>
+        <div className="md:hidden block">
+          <CircularSection size="280px" data={data} index={index} handleIconClick={handleIconClick} slide={slide} getPosition={getPosition}/>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+const CircularSection = ({size, data, index, handleIconClick, slide, getPosition}: {size: string, data: SubsidiaySlide[], index: number, handleIconClick: (i: number) => void, slide: SubsidiaySlide, getPosition: (i: number, total: number) => { x: number; y: number }}) => {
+ return (
+  <div
           className="relative flex-shrink-0"
-          style={{ width: "380px", height: "380px" }}
+          style={{ width: size, height: size }}
         >
           {/* Outer decorative ring */}
           <div
@@ -171,7 +185,5 @@ export default function OurEntities({ data, interval = 10000 }: Props) {
             );
           })}
         </div>
-      </div>
-    </section>
-  );
+ )   
 }

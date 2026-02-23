@@ -117,13 +117,13 @@ export default function TrustedBy() {
   const canNext = index < maxIndex;
 
   return (
-    <div className="w-full flex flex-col items-center pb-20 px-4" style={{ background: "#fff" }}>
+    <div className="w-full flex flex-col items-center pb-10 md:pb-20 px-4" style={{ background: "#fff" }}>
       {/* Title */}
       <motion.div 
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   className="text-center my-20">
-                  <h2 className="text-3xl md:text-4xl font-bold relative inline-block font-montserrat text-foreground">
+                  <h2 className="text-2xl md:text-4xl font-bold relative inline-block font-montserrat text-foreground">
                       Ils nous ont fait confiance
                       <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-24 h-1 bg-slate-600 rounded-full" />
                   </h2>

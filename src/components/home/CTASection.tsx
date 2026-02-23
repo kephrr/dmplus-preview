@@ -17,7 +17,7 @@ const CTASection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-24 lg:py-32 bg-gradient-to-br from-primary via-primary to-secondary relative overflow-hidden" ref={ref}>
+    <section className="py-12 md:py-24 lg:py-32 bg-gradient-to-br from-primary via-primary to-secondary relative overflow-hidden" ref={ref}>
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div 
@@ -41,15 +41,16 @@ const CTASection = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-montserrat font-bold text-4xl text-white mb-6">
+            <h2 className="font-montserrat font-bold text-2xl md:text-4xl 
+            text-white mb-6">
               Prêt à transformer votre vision en réalité ?
             </h2>
-            <p className="text-xl text-white/80 mb-8 leading-relaxed">
+            <p className="text-md md:text-xl text-white/80 mb-8 leading-relaxed">
               Rejoignez les entreprises qui font confiance à DM+ Group pour accélérer 
               leur croissance et atteindre l'excellence.
             </p>
 
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4 md:mb-10 text-sm">
               {benefits.map((benefit, index) => (
                 <motion.li
                   key={index}
@@ -58,7 +59,8 @@ const CTASection = () => {
                   transition={{ duration: 0.4, delay: 0.1 * index }}
                   className="flex items-center gap-3 text-white/90"
                 >
-                  <CheckCircle2 className="w-5 h-5 text-white/60 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-white/60 
+                  flex-shrink-0" />
                   <span>{benefit}</span>
                 </motion.li>
               ))}
