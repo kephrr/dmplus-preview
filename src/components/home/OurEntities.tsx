@@ -8,7 +8,7 @@ interface Props {
   interval?: number;
 }
 
-export default function OurEntities({ data, interval = 10000 }: Props) {
+export default function OurEntities({ data, interval = 5000 }: Props) {
   const [index, setIndex] = useState(0);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -77,9 +77,6 @@ export default function OurEntities({ data, interval = 10000 }: Props) {
           )}
 
           {/* Big title + title */}
-          <p className="text-xs uppercase tracking-widest mb-1 text-gray-500">
-            {slide.bigTitle}
-          </p>
           <h2 className={cn("text-xl md:text-2xl font-bold mb-4", slide.colorClass)}>
             {slide.title}
           </h2>
