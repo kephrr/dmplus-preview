@@ -117,7 +117,7 @@ export default function TrustedBy() {
   const canNext = index < maxIndex;
 
   return (
-    <div className="w-full flex flex-col items-center py-16 px-4" style={{ background: "#fff" }}>
+    <div className="w-full flex flex-col items-center pb-20 px-4" style={{ background: "#fff" }}>
       {/* Title */}
       <motion.div 
                   initial={{ opacity: 0 }}
