@@ -1,13 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Globe2, Users2, MapPin, Paperclip, Clock } from 'lucide-react';
+import statistiques from '@/assets/statistiques.jpg';
 
 const stats = [
   {
     icon: <Paperclip className="w-10 h-10" />,
     value: "100",
     suffix: "",
-    prefix: "+de",
+    prefix: "+",
     label: "Projets",
   },
   {
@@ -23,14 +24,23 @@ const stats = [
   },
   {
     icon: <Users2 className="w-10 h-10" />,
-    value: "40",
+    value: "50",
     label: "Collaborateurs",
   },
 ];
 
 const KeyFigures = () => {
   return (
-    <section className="bg-[#002B5B] py-20 px-6 text-white overflow-hidden relative">
+    <section className="relative py-20 px-6 text-white overflow-hidden">
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${statistiques})` }}
+      />
+      
+      {/* Color overlay */}
+      <div className="absolute inset-0 bg-[#002B5B] opacity-75" />
+      
       {/* Decorative background element */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl -mr-48 -mt-48" />
       
@@ -58,11 +68,11 @@ const KeyFigures = () => {
               </div>
               
               <div className="flex items-baseline gap-1 mb-3">
-                {stat.prefix && <span className="text-2xl font-light text-blue-300">{stat.prefix}</span>}
+                {stat.prefix && <span className="text-2xl font-light">{stat.prefix}</span>}
                 <span className="text-5xl font-extrabold tracking-tighter">
                   {stat.value}
                 </span>
-                {stat.suffix && <span className="text-xl font-medium ml-1 text-blue-200">{stat.suffix}</span>}
+                {stat.suffix && <span className="text-xl font-medium ml-1 ">{stat.suffix}</span>}
               </div>
               
               <p className="text-sm leading-relaxed text-blue-100/70 max-w-[200px] font-medium uppercase tracking-wider">
