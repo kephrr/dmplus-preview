@@ -3,6 +3,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import bg from "@/assets/data-center-coworkers-laughing-having-fun.jpg"
 import fullLogoDM from "@/assets/LOGOTYPE [Récupéré]-02.png"
+import { Quote } from "lucide-react";
 
 const colors = [
   "bg-rose-600",
@@ -57,7 +58,7 @@ const AboutUsSection = () => {
 
         {/* Values Grid */}
         <div className="flex gap-0 px-10">
-          <div className="w-[600px] h-[500px] bg-top bg-cover
+          <div className="w-[600px] min-h-[500px] bg-top bg-cover
           rounded-l-md"
           style={{ backgroundImage: `url(${bg})` }}>
 
@@ -65,7 +66,9 @@ const AboutUsSection = () => {
           <div 
           className="p-6 border text-md text-foreground 
           shadow-md rounded-r-md bg-white">
-                
+            <div className="opacity-20">
+              <Quote width={42} height={42} />
+            </div>
             <strong>DM+ GROUP</strong> est un conglomérat multisectoriel structuré autour d’une vision claire : 
             créer de la valeur durable en combinant stratégie, innovation et synergie opérationnelle. <br /> <br />
 

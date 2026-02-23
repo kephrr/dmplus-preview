@@ -75,11 +75,11 @@ const Footer = () => {
             <ul className="space-y-4 text-sm">
               <li>
                 <a
-                  href="mailto:contact@dmplus-group.com"
+                  href="mailto:services@dmplus-group.com"
                   className="flex items-center gap-3 text-white/70 hover:text-white transition-colors"
                 >
                   <Mail className="w-5 h-5" />
-                  contact@dmplus-group.com
+                  servies@dmplus-group.com
                 </a>
               </li>
               <li>
