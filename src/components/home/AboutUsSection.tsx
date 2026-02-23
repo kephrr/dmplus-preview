@@ -1,11 +1,8 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
-import { Target, Lightbulb, Users, TrendingUp, Shield, Globe } from "lucide-react";
-import vrHeadset from "@/assets/vr-headset.webp";
-import headLogoDM from "@/assets/head dmplus blue.png"
+import { useRef } from "react";
+import bg from "@/assets/data-center-coworkers-laughing-having-fun.jpg"
 import fullLogoDM from "@/assets/LOGOTYPE [Récupéré]-02.png"
-import ImageCard from "../ui/image-card";
 
 const colors = [
   "bg-rose-600",
@@ -59,9 +56,15 @@ const AboutUsSection = () => {
         </motion.div>
 
         {/* Values Grid */}
-        <div className="flex gap-6 px-10">
-            <img className="w-auto h-[150px]" src={fullLogoDM} alt="DM+ GROUP" />
-            <div className="text-md text-foreground ">
+        <div className="flex gap-0 px-10">
+          <div className="w-[600px] h-[500px] bg-top bg-cover
+          rounded-l-md"
+          style={{ backgroundImage: `url(${bg})` }}>
+
+          </div>
+          <div 
+          className="p-6 border text-md text-foreground 
+          shadow-md rounded-r-md bg-white">
                 
             <strong>DM+ GROUP</strong> est un conglomérat multisectoriel structuré autour d’une vision claire : 
             créer de la valeur durable en combinant stratégie, innovation et synergie opérationnelle. <br /> <br />
@@ -77,7 +80,10 @@ const AboutUsSection = () => {
             <strong>Notre vision :</strong> <br /> <br />
             Construire un groupe structuré, discipliné et innovant, capable d’accompagner entreprises, 
             investisseurs et partenaires vers une croissance maîtrisée et stratégique.
+            <div className="float-end">
+              <img src={fullLogoDM} alt="DM+ Group" className="w-24 h-auto mt-10" />
             </div>
+          </div>
         </div>
       </div>
     </section>
