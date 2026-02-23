@@ -14,7 +14,7 @@ import investment from "@/assets/LOGOTYPE [Récupéré]-10.png"
 import technologies from "@/assets/LOGOTYPE [Récupéré]-12.png"
 import distribution from "@/assets/LOGOTYPE [Récupéré]-14.png"
 import academy from "@/assets/LOGOTYPE [Récupéré]-18.png"
-import services from "@/assets/LOGOTYPE [Récupéré]-20.png"
+import Actus from "@/components/home/Actus";
 
 export const subsidiarySlides: SubsidiaySlide[] = [
   {
@@ -127,6 +127,7 @@ const Index = () => {
       <OurEntities data={subsidiarySlides}/>
       <div className="bg-slate-500/25 h-[0.5px] w-[80%] mx-auto mt-6"></div>
       <TrustedBy/>
+      <Actus/>
       {/*<ProcessSection/> <CarouselDomain/>*/}
       <CTASection />
     </Layout>

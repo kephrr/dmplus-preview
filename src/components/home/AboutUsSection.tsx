@@ -5,25 +5,6 @@ import bg from "@/assets/data-center-coworkers-laughing-having-fun.jpg"
 import fullLogoDM from "@/assets/LOGOTYPE [Récupéré]-02.png"
 import { Quote } from "lucide-react";
 
-const colors = [
-  "bg-rose-600",
-  "bg-yellow-600", 
-  "bg-blue-600",
-  "bg-rose-600",
-  "bg-sky-600",
-  "bg-green-600",
-  "bg-indigo-600"
-];
-
-const blurColors = [
-  "bg-rose-600/20",
-  "bg-yellow-600/20", 
-  "bg-blue-600/20",
-  "bg-rose-600/20",
-  "bg-sky-600/20",
-  "bg-green-600/20",
-  "bg-indigo-600/20"
-];
 
 const AboutUsSection = () => {
   const ref = useRef(null);

@@ -43,7 +43,7 @@ export default function OurEntities({ data, interval = 10000 }: Props) {
   };
 
   return (
-    <section id="expertises" className="relative w-full overflow-hidden rounded-3xl">
+    <section id="expertises" className="relative w-full overflow-hidden">
         <motion.div 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
