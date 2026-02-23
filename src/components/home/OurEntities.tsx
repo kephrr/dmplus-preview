@@ -43,18 +43,20 @@ export default function OurEntities({ data, interval = 10000 }: Props) {
   };
 
   return (
-    <section id="entites" className="relative w-full overflow-hidden rounded-3xl">
+    <section id="expertises" className="relative w-full overflow-hidden rounded-3xl">
         <motion.div 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             className="text-center my-20">
             <h2 className="text-3xl md:text-4xl font-bold relative inline-block font-montserrat text-foreground">
-                Nos entités
-                
+                Nos expertises
+                <p className='text-xl font-normal py-2 max-w-2xl mx-auto'>
+                  Des compétences complémentaires, structurées autour d’une même ambition : créer de la valeur durable.
+                </p>
                 <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-24 h-1 bg-slate-600 rounded-full" />
             </h2>
         </motion.div>
-      <div className="max-w-6xl py-10 px-10 mx-auto flex items-center gap-10 min-h-[520px]">
+      <div className="max-w-6xl py-6 px-10 mx-auto flex items-center gap-10 min-h-[400px]">
 
         {/* ── LEFT: slide content ─────────────────────────────────── */}
         <div className="flex-1 min-w-0">
@@ -111,7 +113,7 @@ export default function OurEntities({ data, interval = 10000 }: Props) {
         {/* ── RIGHT: circular icon navigator ──────────────────────── */}
         <div
           className="relative flex-shrink-0"
-          style={{ width: "340px", height: "340px" }}
+          style={{ width: "380px", height: "380px" }}
         >
           {/* Outer decorative ring */}
           <div

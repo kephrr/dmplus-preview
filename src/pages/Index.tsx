@@ -125,7 +125,7 @@ const Index = () => {
       <OurValues />
       <KeyFigures />
       <OurEntities data={subsidiarySlides}/>
-      <div className="bg-slate-500/50 h-[0.5px] w-[80%] mx-auto mt-24"></div>
+      <div className="bg-slate-500/25 h-[0.5px] w-[80%] mx-auto mt-6"></div>
       <TrustedBy/>
       {/*<ProcessSection/> <CarouselDomain/>*/}
       <CTASection />
