@@ -136,12 +136,17 @@ const MOCK_DATA: ActusItem[] = [
   },
 ];
 
-const COLS = 3;
+const COLS_MOBILE = 1;
+const COLS_DESKTOP = 3;
 
 export function ActusCarousel() {
   const [page, setPage] = useState(0);
-  const totalPages = Math.ceil(MOCK_DATA.length / COLS);
-  const visible = MOCK_DATA.slice(page * COLS, page * COLS + COLS);
+  const totalPagesMobile = Math.ceil(MOCK_DATA.length / COLS_MOBILE);
+  const totalPagesDesktop = Math.ceil(MOCK_DATA.length / COLS_DESKTOP);
+  const totalPages = totalPagesDesktop; // Use desktop for consistency
+  
+  const visibleMobile = MOCK_DATA.slice(page * COLS_MOBILE, page * COLS_MOBILE + COLS_MOBILE);
+  const visibleDesktop = MOCK_DATA.slice(page * COLS_DESKTOP, page * COLS_DESKTOP + COLS_DESKTOP);
 
   return (
     <div className="w-full max-w-6xl mx-auto px-4 py-10">
@@ -180,11 +185,23 @@ export function ActusCarousel() {
         </div>
       </div>
 
-      {/* Grid 3 colonnes */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {visible.map((item) => (
-          <CardActus key={item.id} item={item} />
-        ))}
+      {/* Grid responsive */}
+      {/* Mobile version - 1 actu */}
+      <div className="lg:hidden">
+        <div className="grid grid-cols-1 gap-6">
+          {visibleMobile.map((item) => (
+            <CardActus key={item.id} item={item} />
+          ))}
+        </div>
+      </div>
+      
+      {/* Desktop version - 3actus */}
+      <div className="hidden lg:block">
+        <div className="grid grid-cols-3 gap-6">
+          {visibleDesktop.map((item) => (
+            <CardActus key={item.id} item={item} />
+          ))}
+        </div>
       </div>
 
       {/* Pagination dots */}
