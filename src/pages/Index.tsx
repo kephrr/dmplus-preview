@@ -108,7 +108,7 @@ export const subsidiarySlides: SubsidiaySlide[] = [
     icon: subsidiaries[5].icon,
     bgImage: subsidiaries[5].bgImage,
     slogan: [
-      "Solutions logistiques"," optimisées ","pour une supply chain performante"
+      "Partenaire stratégique pour pénétrer, ", "développer et conquérir", "de nouveaux marchés."
     ],
     colorClass: subsidiaries[5].colorClass,
     bgClass: "bg-[#446E25]",

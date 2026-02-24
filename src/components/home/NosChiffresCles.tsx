@@ -51,7 +51,7 @@ const KeyFigures = () => {
           className="text-center text-2xl md:text-5xl font-bold 
           mb-20 tracking-tight"
         >
-          Nos chiffres  <span className="text-blue-400 font-medium ugaz-one-regular">clés</span>
+          Nos chiffres  <span className="text-blue-200 font-bold ugaz-one-regular">clés</span>
         </motion.h2>
 
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 

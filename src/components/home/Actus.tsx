@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import actus2  from "@/assets/G2BJ54cXgAAWQYH.jfif"
+import actus2  from "@/assets/invest.webp"
 import actus1  from "@/assets/lancement-ali-vend-tout.jpeg"
 import actus3  from "@/assets/agri.jpeg"
 
@@ -100,7 +100,7 @@ export function CardActus({ item }: CardActusProps) {
 const MOCK_DATA: ActusItem[] = [
   {
     id: 1,
-    category: "Lancement",
+    category: "DM+ Distribution",
     date: "4/11/2025",
     title: "Lancement de Ali Vend Tout",
     excerpt:
@@ -109,7 +109,7 @@ const MOCK_DATA: ActusItem[] = [
   },
   {
     id: 2,
-    category: "Finance",
+    category: "DM+ Investment",
     date: "6/10/2025",
     title: " Développement d’un simulateur d’investissement intelligent",
     excerpt:
@@ -118,7 +118,7 @@ const MOCK_DATA: ActusItem[] = [
   },
   {
     id: 3,
-    category: "Finance",
+    category: "Fraicheur Teranga",
     date: "1/09/2025",
     title: "Relance des activités Fraîcheur Teranga",
     excerpt:

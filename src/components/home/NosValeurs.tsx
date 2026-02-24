@@ -60,7 +60,7 @@ const OurValues = () => {
               border-slate-100 flex md:flex-col  gap-2 md:gap-0
               items-start hover:shadow-md transition-all duration-300"
             >
-              <div className="w-16 h-16 md:bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600
+              <div className="w-16 h-16 md:bg-blue-50 rounded-2xl flex items-center justify-center text-primary
                mb-8 group-hover:scale-110 transition-transform">
                 {item.icon}
               </div>

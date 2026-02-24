@@ -30,7 +30,7 @@ const HeroSection = () => {
         {/* Left Side: Text Content */}
         <div className="flex flex-col justify-center space-y-8">
           <div className="space-y-4">
-            <h1 className="text-5xl md:text-6xl font-medium leading-[1.1] tracking-tight ">
+            <h1 className="text-5xl md:text-6xl font-bold leading-[1.1] tracking-tight ">
               7 expertises,
               <br /> 
               <TypingText
@@ -45,7 +45,7 @@ const HeroSection = () => {
                         pauseBeforeType={30}  // temps après effacement avant le mot suivant
                                  // (si tu veux que ça s'arrête après le mot)
                         cursor
-                        className="text-4xl md:text-5xl leading-[1.1] tracking-tight ugaz-one-regular"
+                        className="text-5xl md:text-5xl leading-[1.1] tracking-tight ugaz-one-regular"
                         />
             </h1>
             <p className="text-sm md:text-base text-white/80 max-w-md leading-relaxed">
