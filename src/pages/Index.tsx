@@ -14,6 +14,7 @@ import investment from "@/assets/LOGOTYPE [Récupéré]-10.png"
 import technologies from "@/assets/LOGOTYPE [Récupéré]-12.png"
 import distribution from "@/assets/LOGOTYPE [Récupéré]-14.png"
 import academy from "@/assets/LOGOTYPE [Récupéré]-18.png"
+import services from "@/assets/LOGOTYPE [Récupéré]-20.png"
 import Actus from "@/components/home/Actus";
 
 export const subsidiarySlides: SubsidiaySlide[] = [
@@ -30,7 +31,7 @@ export const subsidiarySlides: SubsidiaySlide[] = [
       "Stratégies digitales et ","créatives"," pour amplifier votre marque"
     ],
     colorClass: subsidiaries[0].colorClass,
-    bgClass: "bg-gradient-to-r from-red-400 to-red-600",
+    bgClass: "bg-[#D5252E]",
     logo: marketing
   },
   {
@@ -46,7 +47,7 @@ export const subsidiarySlides: SubsidiaySlide[] = [
       "Solutions financières pour ", "maximiser"," vos rendements"
     ],
     colorClass: subsidiaries[1].colorClass,
-    bgClass: "bg-gradient-to-r from-yellow-400 to-yellow-600",
+    bgClass: "bg-[#DEB833]",
     logo: investment
   },
   {
@@ -62,7 +63,7 @@ export const subsidiarySlides: SubsidiaySlide[] = [
       "","Innovation", "technologique et transformation digitale sur mesure"
     ],
     colorClass: subsidiaries[2].colorClass,
-    bgClass: "bg-gradient-to-r from-blue-400 to-blue-600",
+    bgClass: "bg-[#2A95BF]",
     logo: technologies
   },
   {
@@ -78,8 +79,24 @@ export const subsidiarySlides: SubsidiaySlide[] = [
       "Formation d'excellence pour développer les ", "talents"," de demain"
     ],
     colorClass: subsidiaries[3].colorClass,
-    bgClass: "bg-gradient-to-r from-rose-400 to-rose-600",
+    bgClass: "bg-[#800020]",
     logo: academy
+  },
+  {
+    id: subsidiaries[4].id,
+    bigTitle: "Nos domaines d’expertise",
+    title: subsidiaries[4].name,
+    description: subsidiaries[4].description,
+    longDescription: subsidiaries[4].longDescription,
+    services: subsidiaries[4].services,
+    icon: subsidiaries[4].icon,
+    bgImage: subsidiaries[4].bgImage,
+    slogan: [
+      "Externaliser ", "l'excellence"," opérationnelle"
+    ],
+    colorClass: subsidiaries[4].colorClass,
+    bgClass: "bg-[#1871B3]",
+    logo: services
   },
   {
     id: subsidiaries[5].id,
@@ -94,7 +111,7 @@ export const subsidiarySlides: SubsidiaySlide[] = [
       "Solutions logistiques"," optimisées ","pour une supply chain performante"
     ],
     colorClass: subsidiaries[5].colorClass,
-    bgClass: "bg-gradient-to-r from-green-400 to-green-600",
+    bgClass: "bg-[#446E25]",
     logo: distribution
   },
   {
@@ -110,7 +127,7 @@ export const subsidiarySlides: SubsidiaySlide[] = [
       "Intelligence "," décisionnelle"," et exploitation avancée des données"
     ],
     colorClass: subsidiaries[6].colorClass,
-    bgClass: "bg-gradient-to-r from-indigo-400 to-indigo-600",
+    bgClass: "bg-[#003366]",
     logo: analytics
   },
 ];

@@ -89,7 +89,8 @@ export default function OurEntities({ data, interval = 5000 }: Props) {
             {slide.services.map((service) => (
               <li
                 key={service}
-                className="rounded-full border border-black/10 px-4 py-1 text-xs"
+                className="rounded-full border border-black/10
+                px-4 py-1 text-xs hover:bg-gray-100 cursor-default"
               >
                 {service}
               </li>

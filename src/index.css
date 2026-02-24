@@ -49,45 +49,40 @@
 
     /* Subsidiary Color Palettes */
     
-    /* Marketing & Communication - Rouge Bordeaux */
-    --marketing-primary: 345 70% 35%;
-    --marketing-light: 345 75% 50%;
-    --marketing-gradient: linear-gradient(135deg, hsl(345 70% 35%) 0%, hsl(345 75% 50%) 100%);
-
-    /* Investment - Jaune/Or */
-    --investment-primary: 45 90% 45%;
-    --investment-light: 45 95% 55%;
-    --investment-gradient: linear-gradient(135deg, hsl(45 90% 45%) 0%, hsl(45 95% 55%) 100%);
-
-    /* Technologies - Bleu Clair */
-    --tech-primary: 207 80% 36%;
-    --tech-light: 200 85% 50%;
-    --tech-gradient: linear-gradient(135deg, hsl(207 80% 36%) 0%, hsl(200 85% 50%) 100%);
-
-    /* Academy - Rouge */
-    --academy-primary: 0 75% 50%;
-    --academy-light: 0 80% 60%;
-    --academy-gradient: linear-gradient(135deg, hsl(0 75% 50%) 0%, hsl(0 80% 60%) 100%);
-
-    /* Hubs - Orange */
-    --hubs-primary: 25 90% 50%;
-    --hubs-light: 30 95% 60%;
-    --hubs-gradient: linear-gradient(135deg, hsl(25 90% 50%) 0%, hsl(30 95% 60%) 100%);
-
+    /* Services - Bleu Foncé */
+    --services-primary: 215 100% 35%;
+    --services-light: 215 100% 40%;
+    --services-gradient: linear-gradient(135deg, #1871B3 0%, #215 100% 40% 100%);
+    
+    /* Academy - Rouge Foncé */
+    --academy-primary: 0 100% 12%;
+    --academy-light: 0 100% 15%;
+    --academy-gradient: linear-gradient(135deg, #800020 0%, #800020 100%);
+    
+    /* Technologies - Bleu */
+    --tech-primary: 215 100% 37%;
+    --tech-light: 215 100% 42%;
+    --tech-gradient: linear-gradient(135deg, #2A95BF 0%, #2A95BF 100%);
+    
+    /* Marketing & Communication - Rouge */
+    --marketing-primary: 0 100% 13%;
+    --marketing-light: 0 100% 16%;
+    --marketing-gradient: linear-gradient(135deg, #800020 0%, #800020 100%);
+    
     /* Distribution - Vert */
-    --distribution-primary: 145 65% 35%;
-    --distribution-light: 145 70% 45%;
-    --distribution-gradient: linear-gradient(135deg, hsl(145 65% 35%) 0%, hsl(145 70% 45%) 100%);
-
+    --distribution-primary: 145 100% 38%;
+    --distribution-light: 145 100% 43%;
+    --distribution-gradient: linear-gradient(135deg, #446E25 0%, #446E25 100%);
+    
+    /* Investment - Jaune/Or */
+    --investment-primary: 45 100% 83%;
+    --investment-light: 45 100% 88%;
+    --investment-gradient: linear-gradient(135deg, #DEB833 0%, #DEB833 100%);
+    
     /* Analytics & Data - Bleu Foncé */
-    --analytics-primary: 220 70% 25%;
-    --analytics-light: 220 75% 40%;
-    --analytics-gradient: linear-gradient(135deg, hsl(220 70% 25%) 0%, hsl(220 75% 40%) 100%);
-
-    /* Services - Bleu Marine */
-    --services-primary: 207 70% 28%;
-    --services-light: 207 75% 38%;
-    --services-gradient: linear-gradient(135deg, hsl(207 70% 28%) 0%, hsl(207 75% 38%) 100%);
+    --analytics-primary: 215 100% 25%;
+    --analytics-light: 215 100% 30%;
+    --analytics-gradient: linear-gradient(135deg, #003366 0%, #003366 100%);
 
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(207 70% 28%) 0%, hsl(207 80% 36%) 100%);
