@@ -69,7 +69,7 @@ const AboutUsSection = () => {
             transition={{ duration: 0.6, delay: 1.5 }}
             className="flex flex-col md:flex-row gap-0 md:px-10">
           <div className="md:w-[600px] min-h-[150px] bg-top bg-cover
-          md:rounded-l-md md:rounded-t-none rounded-t-md"
+          md:rounded-l-md md:rounded-tr-none rounded-t-md"
           style={{ backgroundImage: `url(${bg})` }}>
 
           </div>
