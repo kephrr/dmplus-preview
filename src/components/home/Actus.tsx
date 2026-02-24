@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
-import actus1  from "@/assets/G2BJ54cXgAAWQYH.jfif"
-import actus2  from "@/assets/Entreprise-africaine-julief514-iStock.jpg"
-import actus3  from "@/assets/images (2).jpeg"
+import actus2  from "@/assets/G2BJ54cXgAAWQYH.jfif"
+import actus1  from "@/assets/lancement-ali-vend-tout.jpeg"
+import actus3  from "@/assets/agri.jpeg"
 
 const Actus = () => {
     return (
@@ -100,40 +100,31 @@ export function CardActus({ item }: CardActusProps) {
 const MOCK_DATA: ActusItem[] = [
   {
     id: 1,
-    category: "Finance",
+    category: "Lancement",
     date: "4/11/2025",
-    title: "KYCC RegCompass – Octobre 2025",
+    title: "Lancement de Ali Vend Tout",
     excerpt:
-      "KYCC RegCompass - Octobre 2025 : Finance, régulation et innovation : les dynamiques s'accélèrent à travers l'Asie-Pacifique. De Singapour à Hong Kong, du Vietnam à l'Australie, les autorités redéfinissent les standards de conformité, de transparence et d'innovation…",
+      "DM+ Distribution renforce son activité commerciale et annonce le lancement officiel de Ali Vend Tout, sa plateforme dédiée à la distribution d’équipements électroniques, électroménagers et mobiliers. Dans le cadre de ce déploiement, une nouvelle cohorte de Trade Market (commerciaux terrain & digitaux) a été mise en place afin de renforcer la présence commerciale, accélérer la pénétration du marché et optimiser la performance des ventes. Portée par une stratégie de commercialisation digitale combinée à une force de vente structurée, Ali Vend Tout ambitionne de faciliter l’accès aux équipements modernes tout en développant un réseau de distribution agile.",
     image: actus1,
   },
   {
     id: 2,
     category: "Finance",
     date: "6/10/2025",
-    title: "KYCC RegWatch – Septembre 2025",
+    title: " Développement d’un simulateur d’investissement intelligent",
     excerpt:
-      "KYCC RegWatch - Septembre 2025 : Révolution des Services Financiers en Asie-Pacifique. Dans ce numéro, nos experts nous parlent : des services bancaires, des marchés de capitaux & investissements, de l'assurance & la gestion des risques, des paiements…",
+      "DM+ GROUP, à travers DM+ Investment et DM+ Technologies, a lancé le développement d’un simulateur d’investissement digital destiné aux particuliers et aux entreprises. Cet outil permettra aux investisseurs de : simuler différents scénarios d’investissement, analyser le rendement potentiel selon leur profil, optimiser leurs décisions financières grâce à une approche basée sur la data. Cette initiative s’inscrit dans la volonté du groupe de démocratiser l’investissement et de rendre la prise de décision financière plus accessible et structurée.",
     image: actus2,
   },
   {
     id: 3,
     category: "Finance",
     date: "1/09/2025",
-    title: "KYCC RegWatch – Août 2025",
+    title: "Relance des activités Fraîcheur Teranga",
     excerpt:
-      "KYCC RegWatch - Août 2025 : Anticipez les changements, restez conformes. Dans ce numéro, nos experts décryptent les dernières évolutions réglementaires en Asie-Pacifique : Régulation des stablecoins à Hong Kong, Actions de mise en application LBC/FT à Singapour…",
+      "Une nouvelle dynamique pour la distribution agricole DM+ Distribution accélère le développement de Fraîcheur Teranga, en renforçant ses partenariats avec producteurs locaux et clients professionnels tels que restaurants, hôtels et commerces. Cette relance vise à structurer une chaîne d’approvisionnement plus courte, fiable et performante, favorisant une meilleure valorisation des producteurs et une disponibilité continue des produits frais.",
     image: actus3,
-  },
-  {
-    id: 4,
-    category: "Finance",
-    date: "1/08/2025",
-    title: "KYCC RegWatch – Juillet 2025",
-    excerpt:
-      "KYCC RegWatch - Juillet 2025 : Nouvelles règlementations financières en Asie. Ce numéro explore les impacts pour les acteurs régionaux, avec un focus sur la conformité digitale et la gestion des données personnelles…",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80",
-  },
+  }
 ];
 
 const COLS_MOBILE = 1;
