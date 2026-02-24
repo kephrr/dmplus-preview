@@ -114,12 +114,13 @@ export const subsidiaries: Subsidiary[] = [
     name: "DM+ Distribution",
     shortName: "Distribution",
     slug: "distribution",
-    description: "Solutions logistiques optimisées pour une supply chain performante",
-    longDescription: "DM+ Distribution optimise vos flux logistiques à l'échelle mondiale. Notre expertise en supply chain management et nos partenariats stratégiques garantissent efficacité et fiabilité.",
+    description: "Votre partenaire stratégique pour pénétrer, développer et conquérir de nouveaux marchés.",
+    longDescription: "DM+ Distribution propose des solutions complètes de représentation commerciale, de déploiement de réseaux et de distribution multi-produits, permettant aux marques locales et internationales d’accéder rapidement à de nouveaux marchés.",
     services: [
-      "Supply chain optimisée",
-      "Logistique internationale",
-      "Gestion de réseaux de distribution"
+      "Déploiement commercial",
+      "Gestion des canaux de distribution",
+      "Optimisation logistique",
+      "Activation terrain et digitale"
     ],
     icon: Truck,
     bgImage: bgImage,

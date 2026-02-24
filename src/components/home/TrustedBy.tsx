@@ -1,6 +1,11 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
+import senyone from "@/assets/senyone.svg";
+import keurMarie from "@/assets/keur-marie.jfif";
+import comIn from "@/assets/com-in.jpg"
+import saerGroup from "@/assets/saer-group.jpeg"
+import deoya from "@/assets/deoya.png"
 
 interface Logo {
   name: string;
@@ -9,98 +14,35 @@ interface Logo {
 
 const logos: Logo[] = [
   {
-    name: "Rakuten",
+    name: "Senyone",
     svg: (
-      <svg viewBox="0 0 100 30" className="h-10 w-auto md:h-7 md:w-auto" fill="currentColor">
-        <text x="0" y="22" fontFamily="Georgia, serif" fontWeight="700" fontSize="22" letterSpacing="-0.5">Rakuten</text>
-        <rect x="0" y="25" width="55" height="2.5" rx="1" fill="#BF0000"/>
-      </svg>
+      <img className="h-10 w-auto md:h-12 md:w-auto" src={senyone} alt="senyone" />
     ),
   },
   {
-    name: "NCR",
+    name: "Ferme Keur-Marie",
     svg: (
-      <svg viewBox="0 0 80 30" className="h-10 w-auto md:h-7 md:w-auto" fill="currentColor">
-        <circle cx="12" cy="15" r="12" fill="none" stroke="currentColor" strokeWidth="2"/>
-        <circle cx="12" cy="15" r="7" fill="none" stroke="currentColor" strokeWidth="2"/>
-        <line x1="4" y1="8" x2="20" y2="22" stroke="currentColor" strokeWidth="2"/>
-        <text x="28" y="21" fontFamily="Arial, sans-serif" fontWeight="800" fontSize="18" letterSpacing="1">NCR</text>
-      </svg>
+      <img className="h-10 w-auto md:h-12 md:w-auto" src={keurMarie} alt="keur-marie" />
     ),
   },
   {
-    name: "monday.com",
+    name: "Com'In",
     svg: (
-      <svg viewBox="0 0 120 30" className="h-10 w-auto md:h-7 md:w-auto" fill="currentColor">
-        <circle cx="6" cy="19" r="5" fill="#FF3D57"/>
-        <circle cx="18" cy="19" r="5" fill="#FFCB00"/>
-        <circle cx="30" cy="19" r="5" fill="#00CA72"/>
-        <text x="38" y="22" fontFamily="Arial, sans-serif" fontWeight="700" fontSize="16">monday</text>
-        <text x="102" y="22" fontFamily="Arial, sans-serif" fontWeight="400" fontSize="12">.com</text>
-      </svg>
+      <img className="h-10 w-auto md:h-12 md:w-auto" src={comIn} alt="com-in" />
     ),
   },
   {
-    name: "Disney",
+    name: "Saer Group",
     svg: (
-      <svg viewBox="0 0 80 30" className="h-12 w-auto md:h-8 md:w-auto" fill="currentColor">
-        <text x="0" y="24" fontFamily="'Brush Script MT', cursive" fontWeight="700" fontSize="28" letterSpacing="1">Disney</text>
-      </svg>
+      <img className="h-10 w-auto md:h-12 md:w-auto" src={saerGroup} alt="saer-group" />
     ),
   },
   {
-    name: "Dropbox",
+    name: "Deoya",
     svg: (
-      <svg viewBox="0 0 110 30" className="h-10 w-auto md:h-7 md:w-auto" fill="currentColor">
-        <polygon points="9,2 18,8 9,14 0,8" fill="#0061FF"/>
-        <polygon points="18,8 27,2 27,14 18,20" fill="#0061FF"/>
-        <polygon points="9,14 18,20 27,14 18,8" fill="#0061FF" opacity="0.7"/>
-        <polygon points="18,20 9,26 0,20 9,14" fill="#0061FF" opacity="0.8"/>
-        <polygon points="18,20 27,14 27,26 18,26" fill="#0061FF" opacity="0.6"/>
-        <text x="33" y="21" fontFamily="Arial, sans-serif" fontWeight="600" fontSize="16">Dropbox</text>
-      </svg>
+      <img className="h-10 w-auto md:h-12 md:w-auto" src={deoya} alt="saer-group" />
     ),
-  },
-  {
-    name: "Stripe",
-    svg: (
-      <svg viewBox="0 0 70 30" className="h-10 w-auto md:h-7 md:w-auto" fill="currentColor">
-        <text x="0" y="22" fontFamily="Arial, sans-serif" fontWeight="800" fontSize="22" fill="#6772E5">stripe</text>
-      </svg>
-    ),
-  },
-  {
-    name: "Shopify",
-    svg: (
-      <svg viewBox="0 0 90 30" className="h-10 w-auto md:h-7 md:w-auto" fill="currentColor">
-        <text x="0" y="22" fontFamily="Arial, sans-serif" fontWeight="700" fontSize="20" fill="#96BF48">shopify</text>
-      </svg>
-    ),
-  },
-  {
-    name: "Notion",
-    svg: (
-      <svg viewBox="0 0 80 30" className="h-10 w-auto md:h-7 md:w-auto" fill="currentColor">
-        <rect x="0" y="2" width="20" height="26" rx="3" fill="currentColor"/>
-        <rect x="3" y="7" width="5" height="5" rx="1" fill="white"/>
-        <rect x="3" y="15" width="14" height="2" rx="1" fill="white"/>
-        <rect x="3" y="20" width="10" height="2" rx="1" fill="white"/>
-        <text x="26" y="22" fontFamily="Arial, sans-serif" fontWeight="700" fontSize="20">Notion</text>
-      </svg>
-    ),
-  },
-  {
-    name: "Slack",
-    svg: (
-      <svg viewBox="0 0 75 30" className="h-10 w-auto md:h-7 md:w-auto" fill="currentColor">
-        <rect x="2" y="10" width="6" height="10" rx="3" fill="#E01E5A"/>
-        <rect x="10" y="2" width="6" height="10" rx="3" fill="#36C5F0" transform="rotate(90 13 7)"/>
-        <rect x="14" y="10" width="6" height="10" rx="3" fill="#2EB67D"/>
-        <rect x="10" y="18" width="6" height="10" rx="3" fill="#ECB22E" transform="rotate(90 13 23)"/>
-        <text x="26" y="22" fontFamily="Arial, sans-serif" fontWeight="700" fontSize="20">Slack</text>
-      </svg>
-    ),
-  },
+  }
 ];
 
 const VISIBLE_MOBILE = 3;
