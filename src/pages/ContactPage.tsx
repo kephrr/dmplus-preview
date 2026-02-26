@@ -13,7 +13,7 @@ const offices = [
     country: "Sénégal",
     address: "Medina rue 37x24",
     zip: "11000",
-    phone: "+221 76 663 82 20",
+    phone: (<div>+221 76 663 82 20 <br/> +221 33 829 58 06</div>),
     email: "services@dmplus-group.com"
   }
 ];
@@ -215,7 +215,8 @@ const ContactPage = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Téléphone</h3>
                     <a href="tel:+33123456789" className="text-muted-foreground hover:text-primary transition-colors">
-                      +221 76 663 82 20
+                      +221 76 663 82 20 <br />
+                      +221 33 829 58 06
                     </a>
                   </div>
                 </div>
@@ -295,6 +296,7 @@ const ContactPage = () => {
                   </p>
                   <a href={`tel:${office.phone}`} className="block text-foreground hover:text-primary transition-colors">
                     {office.phone}
+
                   </a>
                   <a href={`mailto:${office.email}`} className="block text-primary hover:underline">
                     {office.email}

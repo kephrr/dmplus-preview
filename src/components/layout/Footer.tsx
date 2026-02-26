@@ -90,7 +90,7 @@ const Footer = () => {
                   className="flex items-center gap-3 text-white/70 hover:text-white transition-colors"
                 >
                   <Mail className="w-5 h-5" />
-                  servies@dmplus-group.com
+                  services@dmplus-group.com
                 </a>
               </li>
               <li>
@@ -100,6 +100,14 @@ const Footer = () => {
                 >
                   <Phone className="w-5 h-5" />
                   +221 76 663 82 20
+                </a>
+              </li><li>
+                <a
+                  href="tel:+221+221338295806"
+                  className="flex items-center gap-3 text-white/70 hover:text-white transition-colors"
+                >
+                  <Phone className="w-5 h-5" />
+                 +221 33 829 58 06
                 </a>
               </li>
               <li className="flex items-start gap-3 text-white/70">
