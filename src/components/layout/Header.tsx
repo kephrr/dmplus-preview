@@ -118,7 +118,7 @@ const Header = () => {
                               return (
                                 <Link
                                   key={sub.id}
-                                  to={`/filiale/${sub.slug}`}
+                                  to={`/maintenance`}
                                   className={`flex items-center gap-3 p-1 rounded-xl 
                                   hover:bg-white/5 transition-all duration-200 ${isScrolled ? 'text-black' : 'text-white'}`}
                                 >
@@ -230,7 +230,7 @@ const Header = () => {
                                 return (
                                   <Link
                                   key={sub.id}
-                                  to={`/filiale/${sub.slug}`}
+                                  to={`/maintenance`}
                                   className={`flex items-center gap-3 p-1 rounded-xl 
                                   hover:bg-white/5 transition-all duration-200 ${isScrolled ? 'text-black' : 'text-white'}`}
                                 >

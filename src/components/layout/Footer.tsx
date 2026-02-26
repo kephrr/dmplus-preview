@@ -67,7 +67,7 @@ const Footer = () => {
               {subsidiaries.map((sub) => (
                 <li key={sub.id}>
                   <Link
-                    to={`/filiale/${sub.slug}`}
+                    to={`/maintenance`}
                     className="text-white/70 hover:text-white transition-colors duration-300 flex items-center gap-2 group"
                   >
                     {sub.name}
