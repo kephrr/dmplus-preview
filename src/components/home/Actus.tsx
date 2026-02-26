@@ -180,7 +180,7 @@ export function ActusCarousel() {
       {/* Mobile version - 1 actu */}
       <div className="lg:hidden">
         <div className="grid grid-cols-1 gap-6">
-          {visibleMobile.map((item) => (
+          {visibleDesktop.map((item) => (
             <CardActus key={item.id} item={item} />
           ))}
         </div>

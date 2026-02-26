@@ -96,11 +96,12 @@ export const subsidiaries: Subsidiary[] = [
     shortName: "Services",
     slug: "services",
     description: "Externaliser l'excellence opérationnelle avec des espaces de coworking premium et des incubateurs de startups",
-    longDescription: "DM+ Services propose des solutions complètes d'externalisation opérationnelle avec des espaces de coworking premium, des incubateurs de startups et des centres d'innovation. Nous accompagnons les entrepreneurs visionnaires en créant des écosystèmes où startups et entreprises établies collaborent pour catalyser la croissance et l'innovation.",
+    longDescription: "DM+ Services accompagne les entreprises, entrepreneurs et institutions dans la gestion optimisée de leurs fonctions support, la sécurisation de leurs activités et la dynamisation de leur développement commercial.",
     services: [
-      "Espaces de coworking premium",
-      "Incubateurs de startups",
-      "Centres d'innovation"
+      "Conseil et courtage en assurances",
+      "Gestion administrative & RH externalisée",
+      "Mise à disposition de force commerciale",
+      "Conciergerie d’entreprise & services généraux"
     ],
     icon: Building2,
     bgImage: bgImage,

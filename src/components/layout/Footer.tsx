@@ -3,6 +3,7 @@ import {
   Linkedin, 
   Twitter, 
   Instagram, 
+  Facebook,
   Mail, 
   Phone, 
   MapPin,
@@ -28,7 +29,7 @@ const Footer = () => {
       
       {/* Main Footer */}
       <div className="relative z-10 container mx-auto px-4 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-4">
           {/* Brand Column */}
           <div className="space-y-6 text-sm">
             <div className="flex items-center gap-3">
@@ -42,9 +43,9 @@ const Footer = () => {
             </p>
             <div className="flex gap-3">
               {[
-                { icon: Linkedin, href: "#" },
-                { icon: Twitter, href: "#" },
-                { icon: Instagram, href: "#" },
+                { icon: Linkedin, href: "https://www.linkedin.com/company/digital-mind-plus-group/?viewAsMember=true" },
+                { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61575339630057" },
+                
               ].map(({ icon: Icon, href }, idx) => (
                 <a
                   key={idx}
@@ -94,18 +95,18 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="tel:+33123456789"
+                  href="tel:+221766638220"
                   className="flex items-center gap-3 text-white/70 hover:text-white transition-colors"
                 >
                   <Phone className="w-5 h-5" />
-                  +33 1 23 45 67 89
+                  +221 76 663 82 20
                 </a>
               </li>
               <li className="flex items-start gap-3 text-white/70">
                 <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
                 <span>
-                  123 Avenue de l'Innovation<br />
-                  75008 Paris, France
+                  Medina Rue 37x24<br />
+                  Dakar, Sénégal
                 </span>
               </li>
             </ul>

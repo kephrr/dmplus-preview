@@ -31,7 +31,20 @@ const Header = () => {
   const handleNavClick = (href: string) => {
     if (href.startsWith('/#')) {
       const sectionId = href.substring(2); // Remove '/#'
-      scrollToSection(sectionId);
+      
+      // Check if we're not on the home page
+      if (window.location.pathname !== '/') {
+        // Redirect to home page with hash
+        window.location.href = href;
+        
+        // Wait for page to load before scrolling
+        window.addEventListener('load', () => {
+          scrollToSection(sectionId);
+        });
+      } else {
+        // We're already on home page, just scroll to section
+        scrollToSection(sectionId);
+      }
     }
   };
 
@@ -166,9 +179,11 @@ const Header = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
-              <X className={cn("w-6 h-6", isScrolled ? "text-foreground" : "text-white")} />
+              <X className={cn("w-6 h-6", isScrolled ? 
+                "text-foreground" : "text-white")} />
             ) : (
-              <Menu className={cn("w-6 h-6", isScrolled ? "text-foreground" : "text-white")} />
+              <Menu className={cn("w-6 h-6", isScrolled ? 
+                "text-foreground" : "text-white")} />
             )}
           </button>
         </nav>
@@ -181,7 +196,8 @@ const Header = () => {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden mt-4 bg-white rounded-2xl shadow-2xl overflow-hidden"
+              className={`lg:hidden mt-4 ${isScrolled ? 'bg-white' : 'bg-white/5'} backdrop-blur-md  rounded-2xl 
+              shadow-2xl overflow-hidden`}
             >
               <div className="p-4 space-y-2">
                 {navItems.map((item) => (
@@ -190,7 +206,10 @@ const Header = () => {
                       <div className="space-y-2">
                         <button
                           onClick={() => setIsSubsidiariesOpen(!isSubsidiariesOpen)}
-                          className="flex items-center justify-between w-full px-4 py-3 rounded-xl text-foreground hover:bg-muted transition-colors"
+                          
+                          className={cn ("flex items-center justify-between w-full px-4 py-3 rounded-xl text-foreground hover:bg-muted transition-colors", isScrolled
+                        ? "text-foreground hover:bg-muted"
+                        : "text-white/90 hover:text-white hover:bg-white/10")}
                         >
                           {item.label}
                           <ChevronDown className={cn(
@@ -210,18 +229,23 @@ const Header = () => {
                                 const Icon = sub.icon;
                                 return (
                                   <Link
-                                    key={sub.id}
-                                    to={`/filiale/${sub.slug}`}
-                                    className="flex items-center gap-3 p-3 rounded-xl hover:bg-muted transition-colors"
-                                  >
-                                    <div className={cn(
-                                      "w-8 h-8 rounded-lg flex items-center justify-center bg-gradient-to-br",
-                                      sub.gradientClass
-                                    )}>
-                                      <Icon className="w-4 h-4 text-white" />
+                                  key={sub.id}
+                                  to={`/filiale/${sub.slug}`}
+                                  className={`flex items-center gap-3 p-1 rounded-xl 
+                                  hover:bg-white/5 transition-all duration-200 ${isScrolled ? 'text-black' : 'text-white'}`}
+                                >
+                                  <div className="w-10 h-10 rounded-lg flex items-center justify-center">
+                                    <Icon className="w-5 h-5 8" />
+                                  </div>
+                                  <div>
+                                    <div className="font-medium transition-colors">
+                                      {sub.shortName}
                                     </div>
-                                    <span className="text-sm font-medium">{sub.shortName}</span>
-                                  </Link>
+                                    <div className="text-xs line-clamp-1">
+                                      {sub.services[0]}
+                                    </div>
+                                  </div>
+                                </Link>
                                 );
                               })}
                             </motion.div>
@@ -230,14 +254,16 @@ const Header = () => {
                       </div>
                     ) : (
                       <button
-                        onClick={() => {
-                          handleNavClick(item.href);
-                          setIsMobileMenuOpen(false);
-                        }}
-                        className="block w-full px-4 py-3 rounded-xl text-foreground hover:bg-muted transition-colors text-left"
-                      >
-                        {item.label}
-                      </button>
+                    onClick={() => handleNavClick(item.href)}
+                    className={cn(
+                      "px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm",
+                      isScrolled
+                        ? "text-foreground hover:bg-muted"
+                        : "text-white/90 hover:text-white hover:bg-white/10"
+                    )}
+                  >
+                    {item.label}
+                  </button>
                     )}
                   </div>
                 ))}

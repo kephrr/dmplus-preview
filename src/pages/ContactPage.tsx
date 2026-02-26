@@ -9,28 +9,12 @@ import { toast } from "@/hooks/use-toast";
 
 const offices = [
   {
-    city: "Paris",
-    country: "France",
-    address: "123 Avenue de l'Innovation",
-    zip: "75008",
-    phone: "+33 1 23 45 67 89",
-    email: "paris@dmplus-group.com"
-  },
-  {
-    city: "Londres",
-    country: "Royaume-Uni",
-    address: "45 Innovation Street",
-    zip: "EC1A 1BB",
-    phone: "+44 20 1234 5678",
-    email: "london@dmplus-group.com"
-  },
-  {
-    city: "New York",
-    country: "États-Unis",
-    address: "789 Tech Avenue",
-    zip: "NY 10001",
-    phone: "+1 212 555 0123",
-    email: "nyc@dmplus-group.com"
+    city: "Dakar",
+    country: "Sénégal",
+    address: "Medina rue 37x24",
+    zip: "11000",
+    phone: "+221 76 663 82 20",
+    email: "services@dmplus-group.com"
   }
 ];
 
@@ -218,8 +202,8 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                    <a href="mailto:contact@dmplus-group.com" className="text-muted-foreground hover:text-primary transition-colors">
-                      contact@dmplus-group.com
+                    <a href="mailto:services@dmplus-group.com" className="text-muted-foreground hover:text-primary transition-colors">
+                      services@dmplus-group.com
                     </a>
                   </div>
                 </div>
@@ -231,7 +215,7 @@ const ContactPage = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Téléphone</h3>
                     <a href="tel:+33123456789" className="text-muted-foreground hover:text-primary transition-colors">
-                      +33 1 23 45 67 89
+                      +221 76 663 82 20
                     </a>
                   </div>
                 </div>
@@ -250,7 +234,7 @@ const ContactPage = () => {
               </div>
 
               {/* World Map Placeholder */}
-              <div className="p-6 rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20">
+              <div className="hidden p-6 rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20">
                 <div className="flex items-center gap-2 mb-4">
                   <Globe className="w-5 h-5 text-primary" />
                   <h3 className="font-semibold text-foreground">Présence mondiale</h3>
